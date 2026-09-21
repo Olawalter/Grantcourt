@@ -1,0 +1,951 @@
+{
+  "address": "0x27674f329564F6cBC7f808a2A61a455aeC34eaEE",
+  "constitutions": {
+    "contribution": {
+      "accepted_submission_types": [
+        "TUTORIAL",
+        "ARTICLE",
+        "TRANSLATION"
+      ],
+      "allowed_evidence_categories": [
+        "ARTICLE",
+        "DOCUMENTATION",
+        "OTHER"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "technical_accuracy",
+          "description": "What the contribution says about GenLayer's equivalence rules is correct.",
+          "evidence_categories": [
+            "ARTICLE"
+          ],
+          "name": "Technical accuracy",
+          "required": true,
+          "weight": 40
+        },
+        {
+          "criterion_id": "usefulness",
+          "description": "A builder could act on it: it gives steps or an example.",
+          "evidence_categories": [
+            "ARTICLE"
+          ],
+          "name": "Usefulness",
+          "required": false,
+          "weight": 30
+        },
+        {
+          "criterion_id": "completeness",
+          "description": "It covers what to compare, what to let differ, and how to test the rule.",
+          "evidence_categories": [
+            "ARTICLE"
+          ],
+          "name": "Completeness",
+          "required": false,
+          "weight": 30
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "Rewards for tutorials and articles that teach builders how to choose an equivalence rule for an Intelligent Contract.",
+      "eligibility_policy": "Open to community members. Members of the GenLayer Labs staff are not eligible.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "CONTRIBUTION",
+      "reference_sources": [
+        {
+          "label": "equivalence principle overview",
+          "sha256": "d3f7b7850af9a7ab6812f71c4acdbd7c930ba795074bb6fa32debbd326700123",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/e979504/fixtures/sources/references/equivalence-principle-overview.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "ARTICLE"
+      ],
+      "reward_bands": [
+        {
+          "label": "FULL",
+          "min_score": 60,
+          "reward_atto": "2500000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "200000000000000",
+      "supersedes": "",
+      "title": "Ecosystem tutorials: equivalence rules (contribution)"
+    },
+    "hackathon": {
+      "accepted_submission_types": [
+        "PROJECT"
+      ],
+      "allowed_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE",
+        "DEPLOYMENT_RECORD",
+        "DOCUMENTATION",
+        "TEST_REPORT",
+        "SCREENSHOT_TRANSCRIPT"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "genlayer_fit",
+          "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "REPOSITORY_README"
+          ],
+          "name": "Meaningful GenLayer usage",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "implementation",
+          "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "TEST_REPORT",
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Functional implementation",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "documentation",
+          "description": "A new builder can understand what the project does and how to run it.",
+          "evidence_categories": [
+            "REPOSITORY_README",
+            "DOCUMENTATION"
+          ],
+          "name": "Documentation quality",
+          "required": false,
+          "weight": 20
+        },
+        {
+          "criterion_id": "deployment",
+          "description": "The project is deployed to a GenLayer network and has been used at least once.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Evidence of deployment",
+          "required": false,
+          "weight": 20
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+      "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "HACKATHON",
+      "reference_sources": [
+        {
+          "label": "hackathon starter kit README",
+          "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/e979504/fixtures/sources/references/starter-kit-readme.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE"
+      ],
+      "reward_bands": [
+        {
+          "label": "TIER_A",
+          "min_score": 90,
+          "reward_atto": "6000000000000000"
+        },
+        {
+          "label": "TIER_B",
+          "min_score": 75,
+          "reward_atto": "4000000000000000"
+        },
+        {
+          "label": "TIER_C",
+          "min_score": 60,
+          "reward_atto": "2000000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "500000000000000",
+      "supersedes": "",
+      "title": "GenLayer Judgment Hackathon (hackathon)"
+    }
+  },
+  "finished_at": "2026-09-21T19:30:45Z",
+  "live_scale": 10,
+  "network": "studionet",
+  "outcomes": {
+    "CT01": {
+      "applicant_mark": true,
+      "criterion_result_hash": "ecd10e0f40bb02ed9500f7c339587c53a24dceb4b3c509472c021501a154e7ea",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "SUPPORTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000003",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "PASS",
+        "MEETS_POLICY",
+        "FULL"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "PASS",
+        "MEETS_POLICY",
+        "FULL"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 100,
+      "record_digest": "4832cdac8e2f9d7752c7e3a36770eaebbd32537adb3d9db26373c43eac897e8c",
+      "reward_atto": "2500000000000000",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000003",
+      "tx": "0x62939761ce28c2ad2a58c3bde1e0a37cc9373c077ca21d3fca03b56c9d1c185b"
+    },
+    "CT02": {
+      "applicant_mark": true,
+      "criterion_result_hash": "79e5c40caa4f297a4ba3ca93d9c78a8800a42b3b72d3fa780ead44c12920be4c",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "SIMILAR",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "PARTIALLY_MET",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000004",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "SIMILAR_TO_SOURCE",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "SIMILAR_TO_SOURCE",
+        "NONE"
+      ],
+      "originality_band": "SIMILAR",
+      "overall_score": 55,
+      "record_digest": "68e0409f8fca03c2e50a66f8fa49f760c61145da8923516059c56e13bd341ddf",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000004",
+      "tx": "0x227c6dde7e6a6feca73fded98fa7806a5c83a99abf91d1f7264df9d297c368af"
+    },
+    "CT03": {
+      "applicant_mark": true,
+      "criterion_result_hash": "54a83c623e335a90868d7506d162558f27306e608f4b0d8b02f3ee5bbc3b65b4",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "IRRELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000005",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "OFF_TOPIC",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "OFF_TOPIC",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 0,
+      "record_digest": "0d23403ccae3c45564c4ef037e4ff64822e2f21ea1f41a6a9bfce1cd8bc64f28",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000005",
+      "tx": "0xfc8fa9b024f695d2d7558120cad6c30bf9b03c30a98ab2703818d8daf456abae"
+    },
+    "HK05": {
+      "applicant_mark": true,
+      "criterion_result_hash": "b6c93f692cee7e7fc018349b0ff4f1e432548c477f8c1d0808eae9ce2fcb5390",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_CONFLICTING",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "NOT_MET",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000001",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "CONFLICTING",
+      "expected": [
+        "CONFLICTING_EVIDENCE",
+        "REQUIRED_CRITERION_CONFLICTING",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "CONFLICTING_EVIDENCE",
+        "REQUIRED_CRITERION_CONFLICTING",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 50,
+      "record_digest": "5d6a5da1f3df35b914858dfcbc2980ea6a70ca60d8f7254512c99d9d2018addc",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000001",
+      "tx": "0xfdfed90c23a975af6fbe9fd324567bd03059cf2d7f670e72e262917819cbe81b"
+    },
+    "HK06": {
+      "applicant_mark": true,
+      "criterion_result_hash": "8c59dd2d857a8109a78559518c0f45e0f693d3dfa2408e8f295c7084b2068fb7",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000002",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "REQUIRED_CRITERION_INSUFFICIENT",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 55,
+      "record_digest": "0c17d8d360a87365db46f39b4485fbc6bf01f58290d8ecda26dcbde9798a885b",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000002",
+      "tx": "0xc4e920dce67c90f8fb6628d685ea66d3b3cf4b893c416a7c114e425223b7fa2b"
+    }
+  },
+  "pending": {},
+  "phase": "cases",
+  "programs": {
+    "contribution": "GP-000002",
+    "hackathon": "GP-000001"
+  },
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/Grantcourt/e979504/fixtures/",
+  "started_at": "2026-09-21T19:13:39Z",
+  "steps": {
+    "activate:contribution": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:contribution",
+      "tx": "0x7d1fe724d6e80a3aea5664534636dd8f86cbd7a912038af19e054769947db593",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "activate:hackathon": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:hackathon",
+      "tx": "0xfcc151dc514325e1e3e7a3a06d2d2518944f63d08c7fc6040631963909046639",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:contribution": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000002\"'}",
+      "status": "FINALIZED",
+      "step": "create:contribution",
+      "tx": "0x89711efb7c80440dc627da30357949ab8279633fbc4c451fb7e910c400afcf3b",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:hackathon": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000001\"'}",
+      "status": "FINALIZED",
+      "step": "create:hackathon",
+      "tx": "0xa55440be3dc541dae1541b409e4a2351ceff9cafd76ba067a261051df3cc5535",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CT01": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000003\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT01",
+      "tx": "0x62939761ce28c2ad2a58c3bde1e0a37cc9373c077ca21d3fca03b56c9d1c185b",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CT02": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000004\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT02",
+      "tx": "0x227c6dde7e6a6feca73fded98fa7806a5c83a99abf91d1f7264df9d297c368af",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CT03": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000005\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT03",
+      "tx": "0xfc8fa9b024f695d2d7558120cad6c30bf9b03c30a98ab2703818d8daf456abae",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:HK05": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000001\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK05",
+      "tx": "0xfdfed90c23a975af6fbe9fd324567bd03059cf2d7f670e72e262917819cbe81b",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:HK06": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000002\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK06",
+      "tx": "0xc4e920dce67c90f8fb6628d685ea66d3b3cf4b893c416a7c114e425223b7fa2b",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "fund:contribution:7500000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"7500000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:contribution:7500000000000000",
+      "tx": "0xcac9fa79601b005b3c514fecdce91e11e452542dd8d8ffb5da455a5ff26441ee",
+      "value_atto": "7500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "fund:hackathon:12000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"12000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:hackathon:12000000000000000",
+      "tx": "0x887c0dfdfe97317b832d223a272162b5870b5fbff9d6f456bffe7d282f5510d5",
+      "value_atto": "12000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:CT01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000003\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT01",
+      "tx": "0x4f671f5034fafeee9d06abec51c796509376f424d0cf55d76caa99095a6af9c7",
+      "value_atto": "200000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CT02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000004\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT02",
+      "tx": "0xa9c47dfe7ee9c1b2c308a5458611cde004a4faf4c64da2d63c4fffd755feb23f",
+      "value_atto": "200000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "submit:CT03": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000005\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT03",
+      "tx": "0xa6488a401c082fde6684bcb01f5c95ee558311dd8fd26b2d644314fbd8d3aa50",
+      "value_atto": "200000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "submit:HK05": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000001\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK05",
+      "tx": "0xc14cf60ab8062405b2fefb3febf2b8eeb08879b9c6b36d9790285b2e9815dbfd",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "submit:HK06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000002\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK06",
+      "tx": "0xdc64d387f0749277c3187a0ffbda183c347230cb32a893616ca4f0516d7d67a8",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    }
+  },
+  "submissions": {
+    "CT01": "GS-000003",
+    "CT02": "GS-000004",
+    "CT03": "GS-000005",
+    "HK05": "GS-000001",
+    "HK06": "GS-000002"
+  },
+  "summary": {
+    "held": [
+      "CT01",
+      "CT02",
+      "CT03",
+      "HK05"
+    ],
+    "not_held": [
+      "HK06"
+    ]
+  }
+}

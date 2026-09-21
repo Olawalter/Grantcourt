@@ -699,7 +699,7 @@
      "test report"
     ]
    ],
-   "appeal_reason": "The first evaluation found the implementation unshown because the committed source file was configuration only. The complete source and its test report are attached.",
+   "appeal_reason": "The first evaluation found the implementation unshown because the committed source file only pointed elsewhere. The complete source and its test report are attached.",
    "applicant": "carol",
    "case_id": "HK06",
    "claims": [],
@@ -712,7 +712,7 @@
     [
      "hackathon/carol/lexicon_config.py",
      "SOURCE_FILE",
-     "configuration file"
+     "source pointer file"
     ]
    ],
    "expected": [
@@ -721,7 +721,7 @@
     "NONE"
    ],
    "milestone_id": "",
-   "notes": "the committed source file is configuration only: it neither shows nor rules out the judging method; the appeal adds the complete source and a test report and passes",
+   "notes": "the committed source file only points elsewhere: it neither shows nor rules out the judging method; the appeal adds the complete source and a test report and passes",
    "program": "hackathon",
    "project_description": "Judges whether a community translation is faithful.",
    "project_name": "Lexicon",

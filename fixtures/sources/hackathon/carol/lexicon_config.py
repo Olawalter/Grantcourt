@@ -1,5 +1,4 @@
-# Lexicon configuration (excerpt)
+# Lexicon
 
-SUPPORTED_LANGUAGES = ["es", "fr", "pt", "de"]
-MAX_SOURCE_CHARS = 4000
-FAITHFUL_LABELS = ("FAITHFUL", "UNFAITHFUL", "UNCLEAR")
+# This file only points to the contract. The contract source lives in the
+# repository's contracts directory.

@@ -267,11 +267,10 @@ A validator panel compares the translation with the source and records a
 faithfulness verdict that the validators must agree on.
 """
 
-TEXTS["hackathon/carol/lexicon_config.py"] = """# Lexicon configuration (excerpt)
+TEXTS["hackathon/carol/lexicon_config.py"] = """# Lexicon
 
-SUPPORTED_LANGUAGES = ["es", "fr", "pt", "de"]
-MAX_SOURCE_CHARS = 4000
-FAITHFUL_LABELS = ("FAITHFUL", "UNFAITHFUL", "UNCLEAR")
+# This file only points to the contract. The contract source lives in the
+# repository's contracts directory.
 """
 
 TEXTS["hackathon/carol/lexicon-full.py"] = """# Lexicon contract (excerpt, complete)
@@ -842,9 +841,9 @@ HACKATHON = [
      "project_description": "Judges whether a community translation is faithful.",
      "claims": [],
      "evidence": [ev("hackathon/carol/lexicon-README.md", "REPOSITORY_README", "README"),
-                  ev("hackathon/carol/lexicon_config.py", "SOURCE_FILE", "configuration file")],
+                  ev("hackathon/carol/lexicon_config.py", "SOURCE_FILE", "source pointer file")],
      "expected": ["INSUFFICIENT_EVIDENCE", "REQUIRED_CRITERION_INSUFFICIENT", "NONE"],
-     "notes": "the committed source file is configuration only: it neither shows nor "
+     "notes": "the committed source file only points elsewhere: it neither shows nor "
               "rules out the judging method; the appeal adds the complete source and a "
               "test report and passes",
      "answer": answer(
@@ -862,7 +861,7 @@ HACKATHON = [
                          "complete contract source"),
                       ev("hackathon/carol/lexicon-tests.txt", "TEST_REPORT", "test report")],
      "appeal_reason": "The first evaluation found the implementation unshown because the "
-                      "committed source file was configuration only. The complete source and "
+                      "committed source file only pointed elsewhere. The complete source and "
                       "its test report are attached.",
      "appeal_expected": ["PASS", "MEETS_POLICY", "TIER_C"],
      "appeal_answer": answer(
