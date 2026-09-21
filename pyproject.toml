@@ -12,6 +12,8 @@ addopts = "-p no:cacheprovider"
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# fixtures/sources holds evidence texts that merely look like Python
+extend-exclude = ["fixtures"]
 
 [tool.ruff.lint]
 select = ["E9", "E7", "F"]
