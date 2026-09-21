@@ -1,0 +1,155 @@
+74 mutations, 0 anchor problems
+accept-control: unmodified copy must pass ...
+control green; 74 mutations over 3 job(s)
+
+  [1/74] killed  : text addressed to the evaluator is not manipulation
+  [2/74] killed  : changed bytes are read as the committed evidence
+  [3/74] killed  : hidden characters are not caught
+  [4/74] killed  : duplicate evidence is not decided in code
+  [5/74] killed  : the applicant mark is not required
+  [6/74] killed  : a program's reference passed off as work is not a duplicate
+  [7/74] killed  : an oversized item is read anyway
+  [8/74] killed  : evidence that passed for another applicant is not a duplicate
+  [9/74] killed  : an applicant's own passed evidence is its own duplicate
+  [10/74] killed  : an appeal may add evidence from the applicant's other filing
+  [11/74] killed  : the last filer, not the first, owns the evidence
+  [12/74] killed  : unreadable required evidence is not caught
+  [13/74] killed  : a criterion id may shadow a built-in subject
+  [14/74] killed  : a failed filing keeps its evidence from the applicant's next filing
+  [15/74] killed  : a passed filing releases its evidence
+  [16/74] killed  : a grant may allow fewer filings than milestones
+  [17/74] killed  : two quotes sharing one word are a similarity
+  [18/74] killed  : a similarity needs thirteen shared words
+  [19/74] killed  : a claim finding needs no quote
+  [20/74] killed  : an eligibility finding needs no quote
+  [21/74] killed  : a relevance finding needs no quote
+  [22/74] killed  : a passing criterion may quote any category
+  [23/74] killed  : a criterion naming no categories needs no quote
+  [24/74] killed  : conflicting evidence may be quoted from one item
+  [25/74] killed  : a contradicted claim does not fail
+  [26/74] killed  : an ineligible applicant is judged anyway
+  [27/74] killed  : an unusable model answer is judged anyway
+  [28/74] killed  : a reference source counts as the applicant's evidence
+  [29/74] killed  : off-topic work is judged anyway
+  [30/74] killed  : similar work is not blocked
+  [31/74] killed  : unverifiable eligibility is judged anyway
+  [32/74] killed  : unverifiable relevance is judged anyway
+  [33/74] killed  : conflicting required evidence is not conflicting
+  [34/74] killed  : inconclusive originality is not blocked
+  [35/74] killed  : a required criterion only partly met passes
+  [36/74] killed  : insufficient required evidence is not insufficient
+  [37/74] killed  : partly met earns full points
+  [38/74] killed  : recorded-only similarity blocks the reward
+  [39/74] killed  : a band's own min score misses the band
+  [40/74] killed  : a manipulation keeps its bond
+  [41/74] killed  : the threshold score itself fails
+  [42/74] killed  : no failure is critical
+  [43/74] killed  : required criteria are compared after an earlier reason decided
+  [44/74] killed  : required criteria are never compared
+  [45/74] killed  : the consequence is not compared
+  [46/74] killed  : what each node read is not compared
+  [47/74] killed  : the gate does not re-ground quotes
+  [48/74] killed  : the gate trusts the leader's code reason
+  [49/74] killed  : a model failure is ratified
+  [50/74] killed  : a stale policy version is accepted
+  [51/74] killed  : the owner may apply to its own program
+  [52/74] killed  : a milestone may have two open filings
+  [53/74] killed  : anyone may file a grantee's milestones
+  [54/74] killed  : milestones may be filed out of order
+  [55/74] killed  : required evidence may be missing
+  [56/74] killed  : one item may count twice
+  [57/74] killed  : the per-applicant limit does not hold
+  [58/74] killed  : an applicant may file the same evidence twice
+  [59/74] killed  : the pool may be over-reserved
+  [60/74] killed  : filings are taken before the program opens
+  [61/74] killed  : applicant text may address the evaluator
+  [62/74] killed  : a refused deposit is kept by raising
+  [63/74] killed  : an IP literal is a host
+  [64/74] killed  : the lowest band need not start at the threshold
+  [65/74] killed  : a superseding program may keep the old version
+  [66/74] killed  : the owner may be its own grantee
+  [67/74] killed  : anyone may request an evaluation
+  [68/74] killed  : an evaluation may run after the stall window
+  [69/74] killed  : anyone may appeal
+  [70/74] killed  : an appeal may be filed after its window
+  [71/74] killed  : an appellant may take down its own evidence
+  [72/74] killed  : a passed milestone never advances the grant
+  [73/74] killed  : a submission may be finalized inside its appeal window
+  [74/74] killed  : a withdrawal does not clear the ledger
+
+killed:   changed bytes are read as the committed evidence
+killed:   an oversized item is read anyway
+killed:   text addressed to the evaluator is not manipulation
+killed:   hidden characters are not caught
+killed:   duplicate evidence is not decided in code
+killed:   the applicant mark is not required
+killed:   unreadable required evidence is not caught
+killed:   a program's reference passed off as work is not a duplicate
+killed:   evidence that passed for another applicant is not a duplicate
+killed:   an applicant's own passed evidence is its own duplicate
+killed:   the last filer, not the first, owns the evidence
+killed:   an appeal may add evidence from the applicant's other filing
+killed:   a failed filing keeps its evidence from the applicant's next filing
+killed:   a passed filing releases its evidence
+killed:   a criterion id may shadow a built-in subject
+killed:   a grant may allow fewer filings than milestones
+killed:   two quotes sharing one word are a similarity
+killed:   a similarity needs thirteen shared words
+killed:   an eligibility finding needs no quote
+killed:   a relevance finding needs no quote
+killed:   a claim finding needs no quote
+killed:   a passing criterion may quote any category
+killed:   a criterion naming no categories needs no quote
+killed:   conflicting evidence may be quoted from one item
+killed:   a reference source counts as the applicant's evidence
+killed:   an unusable model answer is judged anyway
+killed:   a contradicted claim does not fail
+killed:   an ineligible applicant is judged anyway
+killed:   unverifiable eligibility is judged anyway
+killed:   off-topic work is judged anyway
+killed:   unverifiable relevance is judged anyway
+killed:   similar work is not blocked
+killed:   inconclusive originality is not blocked
+killed:   recorded-only similarity blocks the reward
+killed:   conflicting required evidence is not conflicting
+killed:   insufficient required evidence is not insufficient
+killed:   a required criterion only partly met passes
+killed:   the threshold score itself fails
+killed:   partly met earns full points
+killed:   a band's own min score misses the band
+killed:   a manipulation keeps its bond
+killed:   no failure is critical
+killed:   required criteria are compared after an earlier reason decided
+killed:   required criteria are never compared
+killed:   the consequence is not compared
+killed:   what each node read is not compared
+killed:   the gate trusts the leader's code reason
+killed:   the gate does not re-ground quotes
+killed:   a model failure is ratified
+killed:   a stale policy version is accepted
+killed:   the owner may apply to its own program
+killed:   anyone may file a grantee's milestones
+killed:   milestones may be filed out of order
+killed:   a milestone may have two open filings
+killed:   required evidence may be missing
+killed:   one item may count twice
+killed:   the per-applicant limit does not hold
+killed:   an applicant may file the same evidence twice
+killed:   the pool may be over-reserved
+killed:   filings are taken before the program opens
+killed:   a refused deposit is kept by raising
+killed:   applicant text may address the evaluator
+killed:   an IP literal is a host
+killed:   the lowest band need not start at the threshold
+killed:   a superseding program may keep the old version
+killed:   the owner may be its own grantee
+killed:   anyone may request an evaluation
+killed:   an evaluation may run after the stall window
+killed:   anyone may appeal
+killed:   an appeal may be filed after its window
+killed:   an appellant may take down its own evidence
+killed:   a submission may be finalized inside its appeal window
+killed:   a passed milestone never advances the grant
+killed:   a withdrawal does not clear the ledger
+
+mutations: 74 killed, 0 survived, 0 anchor missing

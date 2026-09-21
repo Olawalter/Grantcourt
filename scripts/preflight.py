@@ -31,7 +31,9 @@ RESULTS = []
 # names documents use that belong to the toolchain, the repository or JSON, not the contract
 EXTERNAL = {"gen_getContractCode", "gen_getContractSchema", "run_nondet_unsafe",
             "response_format", "consensus_max_rotations", "read_contract", "create_client",
-            "GRANTCOURT_LIVE_WRITES", "raw_base"}
+            "GRANTCOURT_LIVE_WRITES", "raw_base",
+            # fixture band labels, the brief's unstored state, a live-run script constant
+            "TIER_A", "TIER_B", "TIER_C", "EVIDENCE_LOCKED", "LIVE_SCALE"}
 ADDRESS = re.compile(r"0x[0-9a-fA-F]{40}(?![0-9a-fA-F])")
 
 
@@ -60,7 +62,7 @@ def main():
         for token in re.findall(r"`([A-Za-z_][A-Za-z0-9_]*)(?:\(|`)", path.read_text(
                 encoding="utf-8")):
             symbolic = token.startswith("_") or "_" in token
-            if not symbolic or token in EXTERNAL:
+            if not symbolic or token in EXTERNAL or token.startswith("test_"):
                 continue
             if re.search(r"(?<![A-Za-z0-9_])" + re.escape(token) + r"(?![A-Za-z0-9_])",
                          source) is None:
