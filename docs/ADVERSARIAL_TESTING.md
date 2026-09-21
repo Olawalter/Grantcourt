@@ -61,7 +61,8 @@ note; an invented quote; a SIMILAR or CONTRADICTED without its support; an
 extra field. Every one is refused. Further tests show:
 
 - validators disagreeing on a required criterion do not ratify;
-- a required criterion's state is compared even when the status matches;
+- a required criterion's state is compared when the outcome was decided at the
+  criteria step, and not once an earlier reason (a contradicted claim) decided it;
 - evidence changing between the leader's and the validator's attempt is a
   disagreement;
 - a leader claiming unavailable evidence was read, hiding a marker, or

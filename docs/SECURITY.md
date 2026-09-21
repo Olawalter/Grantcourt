@@ -14,7 +14,7 @@ Applicants control their evidence and will try to steer the panel.
 - **Code catches what code can.** `_scan` looks for text addressed to whoever
   evaluates the application (`EVALUATOR_MARKERS`: "note to the evaluator",
   "attention validator", "ignore the evaluation policy", "approve this
-  project", "give this submission", ...). A marker in any applicant item is
+  project", "give this submission a score", ...). A marker in any applicant item is
   `MANIPULATION`: the panel is never asked, the application fails as a critical
   failure and the bond is forfeited. This covers README files, documentation,
   webpage text including markup a browser would hide, screenshot transcripts,
