@@ -1,0 +1,5 @@
+Verdictbox direct-mode test report
+
+collected 11 items
+7 passed, 4 failed in 2.9s
+FAILED test_judge_mismatch, test_judge_partial, test_malformed_answer, test_retry

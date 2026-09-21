@@ -1,0 +1,255 @@
+{
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Grant: settlement adapter grant"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "K1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "finalized, execution succeeded"
+       }
+      ],
+      "state": "SUPPORTED"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "The adapter contract is deployed to StudioNet"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "evidence_quality": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "its schema was read back and lists settle, refund and get_settlement"
+       }
+      ],
+      "state": "MET"
+     },
+     "milestone_delivered": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "Result: finalized, execution succeeded, settlement recorded as PAID"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "applicant": "erin",
+   "case_id": "GM01",
+   "claims": [
+    {
+     "claim": "The first settlement call through the adapter finalized.",
+     "criterion_id": "milestone_delivered"
+    }
+   ],
+   "evidence": [
+    [
+     "grant/erin/m1-report.md",
+     "MILESTONE_REPORT",
+     "M1 report"
+    ],
+    [
+     "grant/erin/m1-deployment.txt",
+     "DEPLOYMENT_RECORD",
+     "deployment record"
+    ],
+    [
+     "grant/erin/m1-transaction.txt",
+     "TRANSACTION_RECORD",
+     "transaction record"
+    ]
+   ],
+   "expected": [
+    "PASS",
+    "MEETS_POLICY",
+    "M1"
+   ],
+   "milestone_id": "M1",
+   "notes": "the first milestone, fully evidenced: its tranche is released",
+   "program": "grant",
+   "project_description": "Milestone M1: the adapter deployed to the test network.",
+   "project_name": "Settlement adapter",
+   "submission_type": "MILESTONE_DELIVERABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Grant: settlement adapter grant"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Milestone M2 asked for integration documentation"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "evidence_quality": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "settle(\"inv-7\", 25) returns PAID"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "milestone_delivered": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "A settle on an unknown invoice fails with UNKNOWN_INVOICE"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "applicant": "erin",
+   "case_id": "GM02",
+   "claims": [],
+   "evidence": [
+    [
+     "grant/erin/m2-report.md",
+     "MILESTONE_REPORT",
+     "M2 report"
+    ],
+    [
+     "grant/erin/m2-guide.md",
+     "DOCUMENTATION",
+     "integration guide"
+    ]
+   ],
+   "expected": [
+    "PASS",
+    "MEETS_POLICY",
+    "M2"
+   ],
+   "milestone_id": "M2",
+   "notes": "the second milestone, filed once the first passed and settled",
+   "program": "grant",
+   "project_description": "Milestone M2: integration documentation.",
+   "project_name": "Settlement adapter",
+   "submission_type": "MILESTONE_DELIVERABLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Grant: settlement adapter grant"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "K1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "the deploy transaction is still pending and no contract address exists yet"
+       }
+      ],
+      "state": "CONTRADICTED"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Milestone M1 asked for the adapter contract to be deployed"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "evidence_quality": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "the deploy transaction is still pending"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "milestone_delivered": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "No test transaction has been sent"
+       }
+      ],
+      "state": "NOT_MET"
+     }
+    }
+   },
+   "applicant": "erin",
+   "case_id": "GM03",
+   "claims": [
+    {
+     "claim": "The adapter is deployed and working.",
+     "criterion_id": "milestone_delivered"
+    }
+   ],
+   "evidence": [
+    [
+     "grant/erin/m1-report-early.md",
+     "MILESTONE_REPORT",
+     "M1 report"
+    ],
+    [
+     "grant/erin/m1-deployment-pending.txt",
+     "DEPLOYMENT_RECORD",
+     "deployment record"
+    ]
+   ],
+   "expected": [
+    "FAIL",
+    "CLAIM_CONTRADICTED",
+    "NONE"
+   ],
+   "milestone_id": "M1",
+   "notes": "the report announces the milestone; the deployment record shows it is not done: no tranche",
+   "program": "grant",
+   "project_description": "Milestone M1: the adapter deployed to the test network.",
+   "project_name": "Settlement adapter",
+   "submission_type": "MILESTONE_DELIVERABLE"
+  }
+ ]
+}

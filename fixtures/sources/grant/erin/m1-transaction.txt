@@ -1,0 +1,4 @@
+Settlement adapter transaction record
+
+Method: settle, with a sample invoice of 25 units
+Result: finalized, execution succeeded, settlement recorded as PAID

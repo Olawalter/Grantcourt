@@ -1,0 +1,6 @@
+Clauseguard deployment record
+
+Network: GenLayer StudioNet
+Contract deployed and finalized; the deploy transaction was accepted by the
+validator set and the contract schema was read back after deployment.
+First write: judge_clause on a sample clause, finalized with verdict UNFAIR.

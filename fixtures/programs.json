@@ -1,0 +1,304 @@
+{
+ "hashes": {
+  "sources/adversarial/bob/hidden-README.md": "4ce4bf01f5b55e06d64cce4415b5ff42c129b992d8016f07026bbe0153296692",
+  "sources/adversarial/bob/rulecheck.py": "4b97deea4ce36d8f17b2da6634e99949c61450edc2fbd06ce5cf291702e7f6c4",
+  "sources/adversarial/bob/starter-README.md": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+  "sources/adversarial/carol/deployment-page.html": "578a77e2b0312c6831aafcd09a3988b7e171bf11a19b73ce445deafd3b58d214",
+  "sources/adversarial/carol/meme-README.md": "59dd06365a09deb57155a47564dce406a26cfbf9a0c2de23cdd1426969352205",
+  "sources/adversarial/carol/memecourt-docs.md": "acf3ee9af32c155ed0acc8e55563f84bd10f0f96b8233415281a2c7c976ea098",
+  "sources/adversarial/carol/memecourt.py": "38ec090104dc2826005dfb9f1ca5b34a4b6760880f023520dd45f13afd1e63c0",
+  "sources/adversarial/carol/screenshot-transcript.txt": "badaf492e4339b6f5fe3342b7e6991466fbdc62c31ebb635aae2a133e9c55980",
+  "sources/adversarial/dave/hypeboard.py": "9da7eb216abc1adecd4211af2ee6dd8a6b31149d65efceceef6b126cbcac4a91",
+  "sources/adversarial/dave/injected-README.md": "218350ecb6f465f530ff0333cf11e209e6d660f7cb41c0f2f7d5e7f18bcdfbae",
+  "sources/adversarial/dave/quickjudge.py": "384f31f3626571c9bbc38fba4492fa6c93756c1c153eeb0ce4a27cd361b63d78",
+  "sources/adversarial/dave/rubric-README.md": "8907ea5ed1196f8c4391437222734aef3351d64275f38c385463c7f4bd73ba39",
+  "sources/adversarial/erin/fairsplit.py": "c1b60c28db9b32ef1eae9be4fe2b24ed41f5a9819ba6176acb60adbc0755ee01",
+  "sources/adversarial/erin/fake-deployment.txt": "1e21ef42176eb123b5e5417b4e1640526cdeaa49aa5f8251688e9965336796cc",
+  "sources/adversarial/erin/marked-README.md": "7aa21e9092dce013b4502c09f1e9d9d61683a76767edf4c21379169eb3dbb515",
+  "sources/adversarial/erin/unmarked-README.md": "0c1888c3c16aaca4324c25bf0981baa335aba931013845827b96cf5a3d446fe8",
+  "sources/contribution/alice/equivalence-tutorial.md": "df1835111aeb8bb47c0d782c5e6f555ef629f8ece89645589e0224c7fc1ea70d",
+  "sources/contribution/bob/equivalence-guide.md": "040c98671bab1fed4bbd61600f85850ab19d3fcd46d25795ec47b65c1127031d",
+  "sources/contribution/carol/staking-yields.md": "f625af16edfda6062b68c7a698383eb91e19c6fbf3895291bfdb03b4567f31d6",
+  "sources/contribution/dave/appeals-explained.md": "25fcf8705a76259060e7a917e6bf82bc3b59cd26c26fcb93e3f596e709b5b2cc",
+  "sources/grant/erin/m1-deployment-pending.txt": "87fbc586d55dce8ea914dd3a550a146ca5a0710716c01ef75fa0f6295323bad0",
+  "sources/grant/erin/m1-deployment.txt": "0a7402dc5dbcad45cc7e460dac434a67dc5885738c830ef9ecaabdcf79d7fdcd",
+  "sources/grant/erin/m1-report-early.md": "1b8e6bdf6e32f2a7e4cedd37f116a6e76d59348fca48b630208363091746919d",
+  "sources/grant/erin/m1-report.md": "49406ce9f0abad6ede223960d5d3077187e09ec1aff39cce51b8b3c7f07857ce",
+  "sources/grant/erin/m1-transaction.txt": "c666cfcd6f0950240d52130cc5d8adaf23610abea1f709260f11e95e11c10d0d",
+  "sources/grant/erin/m2-guide.md": "1d84eb79687fbb6bebabf4ef323d1081bcba3f4dfca9bb99ea52eba2540df486",
+  "sources/grant/erin/m2-report.md": "1effde25fd5e1812cdba1dd698fa14fab52461365a6a5f96ca47d92b770458e3",
+  "sources/hackathon/alice/README.md": "5dba4895e74f6800b426884a558ff445942442bfb9a3b57f1ee78a3f9227c7a3",
+  "sources/hackathon/alice/clauseguard.py": "79f732aa05174c44cb238fc0601e6ebe113f0b96a11cc0e83adf240c24908f4c",
+  "sources/hackathon/alice/deployment.txt": "e5ac5b2f4a017f0ae6077bf2b989a30bce082ee573a5169a38ba19c4c598e15b",
+  "sources/hackathon/alice/tests.txt": "9b7a7ca9f5f927ffa428de3394ba038099b701afb0961b26dc48dff030fd1dd3",
+  "sources/hackathon/bob/README.md": "f5767820152e984b69c70075d637ab1d8acf8b4d346c320f157533f12cc86d1b",
+  "sources/hackathon/bob/pricewire.py": "6ad94d8853ca489edadabb66f18af041f4e8cbf537baebbf5d40169815d05526",
+  "sources/hackathon/bob/verdictbox-README.md": "c76cbec87adec88decea877baff35ffbf291ce69f1181f32a8554c675e66a135",
+  "sources/hackathon/bob/verdictbox-tests.txt": "71718c080868421df565d8fbfb5bc9ecb8537e3bdc8c841f9c86662443788116",
+  "sources/hackathon/bob/verdictbox.py": "bf2214e2fb606d68c8213310e89956a733313593f104d945c802e0858b5f95d3",
+  "sources/hackathon/carol/README.md": "ff0ebc57a3427632eeb28c15f841e49fc34fce7e0720da984dcf8c7183736568",
+  "sources/hackathon/carol/grantwise.py": "3266fc9d05ad9aa78c44635ea945eaca3831f28d2ce846bd7c3470c287e09fcb",
+  "sources/hackathon/carol/lexicon-README.md": "fc677dfd0caa498ae734bb39a071cca52371958e911020ace24345c4cdb86b31",
+  "sources/hackathon/carol/lexicon-full.py": "23a0614664c7f57ca93086a3038952b044ca76745d7d6bea5d66194c6dd9e5e7",
+  "sources/hackathon/carol/lexicon-tests.txt": "ef611ea70634253344bbfe976ad8cde41a1b97be8a604a46356729c5064627b5",
+  "sources/hackathon/carol/lexicon.py": "0b296344ae8df475418fd789c3db370f812893a3e79a306f7a5f1a4c31b7e472",
+  "sources/hackathon/carol/tests.txt": "efa399aee8dd1a4392f2cf4e063de4c387d62a89ecff15295d70a529e56139e4",
+  "sources/hackathon/dave/README.md": "820d70e82a4215fc611a3847bd9b879c7c574e785469c00f645d47afcadb2e60",
+  "sources/hackathon/dave/deployment.txt": "7e58ced70f1d4931f4a458eb3ae680f2f65b23efb52799c44e4f6d4e7178ec60",
+  "sources/hackathon/dave/tallyhall.py": "a67064bb99890bbbf3e38d3c80ab9932f888bb79162a458809018caa49628304",
+  "sources/references/equivalence-principle-overview.md": "d3f7b7850af9a7ab6812f71c4acdbd7c930ba795074bb6fa32debbd326700123",
+  "sources/references/starter-kit-readme.md": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1"
+ },
+ "programs": {
+  "contribution": {
+   "accepted_submission_types": [
+    "TUTORIAL",
+    "ARTICLE",
+    "TRANSLATION"
+   ],
+   "allowed_evidence_categories": [
+    "ARTICLE",
+    "DOCUMENTATION",
+    "OTHER"
+   ],
+   "appeal_window_seconds": 259200,
+   "criteria": [
+    {
+     "criterion_id": "technical_accuracy",
+     "description": "What the contribution says about GenLayer's equivalence rules is correct.",
+     "evidence_categories": [
+      "ARTICLE"
+     ],
+     "name": "Technical accuracy",
+     "required": true,
+     "weight": 40
+    },
+    {
+     "criterion_id": "usefulness",
+     "description": "A builder could act on it: it gives steps or an example.",
+     "evidence_categories": [
+      "ARTICLE"
+     ],
+     "name": "Usefulness",
+     "required": false,
+     "weight": 30
+    },
+    {
+     "criterion_id": "completeness",
+     "description": "It covers what to compare, what to let differ, and how to test the rule.",
+     "evidence_categories": [
+      "ARTICLE"
+     ],
+     "name": "Completeness",
+     "required": false,
+     "weight": 30
+    }
+   ],
+   "deadline": "2026-10-15T23:59:59Z",
+   "description": "Rewards for tutorials and articles that teach builders how to choose an equivalence rule for an Intelligent Contract.",
+   "eligibility_policy": "Open to community members. Members of the GenLayer Labs staff are not eligible.",
+   "evaluation_policy_version": 1,
+   "grantee": "",
+   "milestones": [],
+   "opens_at": "2026-09-01T00:00:00Z",
+   "originality_policy": "SIMILAR_BLOCKS_REWARD",
+   "pass_threshold": 60,
+   "per_applicant_limit": 2,
+   "program_type": "CONTRIBUTION",
+   "reference_sources": [
+    {
+     "label": "equivalence principle overview",
+     "sha256": "d3f7b7850af9a7ab6812f71c4acdbd7c930ba795074bb6fa32debbd326700123",
+     "url": "{BASE}sources/references/equivalence-principle-overview.md"
+    }
+   ],
+   "require_applicant_mark": true,
+   "required_evidence_categories": [
+    "ARTICLE"
+   ],
+   "reward_bands": [
+    {
+     "label": "FULL",
+     "min_score": 60,
+     "reward_atto": "25000000000000000"
+    }
+   ],
+   "stall_window_seconds": 604800,
+   "submission_bond_atto": "2000000000000000",
+   "supersedes": "",
+   "title": "Ecosystem tutorials: equivalence rules"
+  },
+  "grant": {
+   "accepted_submission_types": [
+    "MILESTONE_DELIVERABLE"
+   ],
+   "allowed_evidence_categories": [
+    "MILESTONE_REPORT",
+    "DEPLOYMENT_RECORD",
+    "TRANSACTION_RECORD",
+    "DOCUMENTATION"
+   ],
+   "appeal_window_seconds": 259200,
+   "criteria": [
+    {
+     "criterion_id": "milestone_delivered",
+     "description": "The evidence shows the milestone's definition is satisfied in full, not only announced in the report.",
+     "evidence_categories": [
+      "DEPLOYMENT_RECORD",
+      "TRANSACTION_RECORD",
+      "DOCUMENTATION"
+     ],
+     "name": "Milestone delivered",
+     "required": true,
+     "weight": 60
+    },
+    {
+     "criterion_id": "evidence_quality",
+     "description": "The report points to concrete evidence a reviewer can check.",
+     "evidence_categories": [],
+     "name": "Evidence quality",
+     "required": false,
+     "weight": 40
+    }
+   ],
+   "deadline": "2026-10-15T23:59:59Z",
+   "description": "A two-milestone builder grant for a settlement adapter contract and its integration documentation.",
+   "eligibility_policy": "Only the named grantee. Each milestone report must identify the grant as the settlement adapter grant.",
+   "evaluation_policy_version": 1,
+   "grantee": "0xd1fbaafefdc4670a533c2a96f07df10479fd00a6",
+   "milestones": [
+    {
+     "definition": "Deploy the settlement adapter contract to the test network and show one successful settlement transaction through it.",
+     "milestone_id": "M1",
+     "title": "Adapter deployed to the test network",
+     "tranche_atto": "50000000000000000"
+    },
+    {
+     "definition": "Publish integration documentation covering installation, the settle and refund calls, error handling and a worked example.",
+     "milestone_id": "M2",
+     "title": "Integration documentation published",
+     "tranche_atto": "30000000000000000"
+    }
+   ],
+   "opens_at": "2026-09-01T00:00:00Z",
+   "originality_policy": "SIMILAR_RECORDED_ONLY",
+   "pass_threshold": 60,
+   "per_applicant_limit": 4,
+   "program_type": "GRANT_MILESTONE",
+   "reference_sources": [],
+   "require_applicant_mark": true,
+   "required_evidence_categories": [
+    "MILESTONE_REPORT"
+   ],
+   "reward_bands": [],
+   "stall_window_seconds": 604800,
+   "submission_bond_atto": "0",
+   "supersedes": "",
+   "title": "Builder grant: settlement adapter"
+  },
+  "hackathon": {
+   "accepted_submission_types": [
+    "PROJECT"
+   ],
+   "allowed_evidence_categories": [
+    "REPOSITORY_README",
+    "SOURCE_FILE",
+    "DEPLOYMENT_RECORD",
+    "DOCUMENTATION",
+    "TEST_REPORT",
+    "SCREENSHOT_TRANSCRIPT"
+   ],
+   "appeal_window_seconds": 259200,
+   "criteria": [
+    {
+     "criterion_id": "genlayer_fit",
+     "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+     "evidence_categories": [
+      "SOURCE_FILE",
+      "REPOSITORY_README"
+     ],
+     "name": "Meaningful GenLayer usage",
+     "required": true,
+     "weight": 30
+    },
+    {
+     "criterion_id": "implementation",
+     "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+     "evidence_categories": [
+      "SOURCE_FILE",
+      "TEST_REPORT",
+      "DEPLOYMENT_RECORD"
+     ],
+     "name": "Functional implementation",
+     "required": true,
+     "weight": 30
+    },
+    {
+     "criterion_id": "documentation",
+     "description": "A new builder can understand what the project does and how to run it.",
+     "evidence_categories": [
+      "REPOSITORY_README",
+      "DOCUMENTATION"
+     ],
+     "name": "Documentation quality",
+     "required": false,
+     "weight": 20
+    },
+    {
+     "criterion_id": "deployment",
+     "description": "The project is deployed to a GenLayer network and has been used at least once.",
+     "evidence_categories": [
+      "DEPLOYMENT_RECORD"
+     ],
+     "name": "Evidence of deployment",
+     "required": false,
+     "weight": 20
+    }
+   ],
+   "deadline": "2026-10-15T23:59:59Z",
+   "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+   "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+   "evaluation_policy_version": 1,
+   "grantee": "",
+   "milestones": [],
+   "opens_at": "2026-09-01T00:00:00Z",
+   "originality_policy": "SIMILAR_BLOCKS_REWARD",
+   "pass_threshold": 60,
+   "per_applicant_limit": 3,
+   "program_type": "HACKATHON",
+   "reference_sources": [
+    {
+     "label": "hackathon starter kit README",
+     "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+     "url": "{BASE}sources/references/starter-kit-readme.md"
+    }
+   ],
+   "require_applicant_mark": true,
+   "required_evidence_categories": [
+    "REPOSITORY_README",
+    "SOURCE_FILE"
+   ],
+   "reward_bands": [
+    {
+     "label": "TIER_A",
+     "min_score": 90,
+     "reward_atto": "60000000000000000"
+    },
+    {
+     "label": "TIER_B",
+     "min_score": 75,
+     "reward_atto": "40000000000000000"
+    },
+    {
+     "label": "TIER_C",
+     "min_score": 60,
+     "reward_atto": "20000000000000000"
+    }
+   ],
+   "stall_window_seconds": 604800,
+   "submission_bond_atto": "5000000000000000",
+   "supersedes": "",
+   "title": "GenLayer Judgment Hackathon"
+  }
+ }
+}

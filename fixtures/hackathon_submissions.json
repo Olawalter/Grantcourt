@@ -1,0 +1,731 @@
+{
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "K1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "every validator re-reads the clause with its own model"
+       }
+      ],
+      "state": "SUPPORTED"
+     },
+     "K2": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "Network: GenLayer StudioNet"
+       }
+      ],
+      "state": "SUPPORTED"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Whether a clause is unfair is a judgment about meaning"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "First write: judge_clause on a sample clause, finalized with verdict UNFAIR"
+       }
+      ],
+      "state": "MET"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Run the direct tests with pytest, then deploy with scripts/deploy.py"
+       }
+      ],
+      "state": "MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "every validator re-reads the clause with its own model and must reach the same verdict"
+       }
+      ],
+      "state": "MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E4",
+        "text": "14 passed in 3.1s"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "applicant": "alice",
+   "case_id": "HK01",
+   "claims": [
+    {
+     "claim": "The contract asks a validator panel to judge whether a clause is unfair.",
+     "criterion_id": "genlayer_fit"
+    },
+    {
+     "claim": "Clauseguard is deployed on StudioNet.",
+     "criterion_id": "deployment"
+    }
+   ],
+   "evidence": [
+    [
+     "hackathon/alice/README.md",
+     "REPOSITORY_README",
+     "README"
+    ],
+    [
+     "hackathon/alice/clauseguard.py",
+     "SOURCE_FILE",
+     "contract source"
+    ],
+    [
+     "hackathon/alice/deployment.txt",
+     "DEPLOYMENT_RECORD",
+     "deployment record"
+    ],
+    [
+     "hackathon/alice/tests.txt",
+     "TEST_REPORT",
+     "test report"
+    ]
+   ],
+   "expected": [
+    "PASS",
+    "MEETS_POLICY",
+    "TIER_A"
+   ],
+   "milestone_id": "",
+   "notes": "the honest baseline, and the negative control for the injection scan: it quotes an injection phrase as data without addressing the evaluator",
+   "program": "hackathon",
+   "project_description": "Flags unfair clauses in freelance contracts with a validator panel.",
+   "project_name": "Clauseguard",
+   "submission_type": "PROJECT"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "every validator must read the same number"
+       }
+      ],
+      "state": "PARTIALLY_RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "PriceWire stores the latest ETH price on chain"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "There is no judgment step; the contract is a price feed"
+       }
+      ],
+      "state": "NOT_MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "self.price = gl.eq_principle.strict_eq(fetch)"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "applicant": "bob",
+   "case_id": "HK02",
+   "claims": [],
+   "evidence": [
+    [
+     "hackathon/bob/README.md",
+     "REPOSITORY_README",
+     "README"
+    ],
+    [
+     "hackathon/bob/pricewire.py",
+     "SOURCE_FILE",
+     "contract source"
+    ]
+   ],
+   "expected": [
+    "FAIL",
+    "REQUIRED_CRITERION_NOT_MET",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "works, but GenLayer does no judgment: a required criterion is not met",
+   "program": "hackathon",
+   "project_description": "An on-chain ETH price feed.",
+   "project_name": "PriceWire",
+   "submission_type": "PROJECT"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "K1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "the per-question verdicts must match"
+       }
+      ],
+      "state": "SUPPORTED"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "asks a validator panel whether the proposal answers each question"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Documentation is still thin: this README is the only guide for now"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "the per-question verdicts must match; the explanations may differ"
+       }
+      ],
+      "state": "MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "9 passed in 2.4s"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "applicant": "carol",
+   "case_id": "HK03",
+   "claims": [
+    {
+     "claim": "Validators must agree on the per-question verdicts.",
+     "criterion_id": "genlayer_fit"
+    }
+   ],
+   "evidence": [
+    [
+     "hackathon/carol/README.md",
+     "REPOSITORY_README",
+     "README"
+    ],
+    [
+     "hackathon/carol/grantwise.py",
+     "SOURCE_FILE",
+     "contract source"
+    ],
+    [
+     "hackathon/carol/tests.txt",
+     "TEST_REPORT",
+     "test report"
+    ]
+   ],
+   "expected": [
+    "PASS",
+    "MEETS_POLICY",
+    "TIER_C"
+   ],
+   "milestone_id": "",
+   "notes": "the band boundary: required criteria met, documentation partial, no deployment - score 70, the lowest band",
+   "program": "hackathon",
+   "project_description": "Checks grant proposals against the call's questions.",
+   "project_name": "Grantwise",
+   "submission_type": "PROJECT"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "K1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "There is no mainnet deployment yet, and no users outside the team have used it"
+       }
+      ],
+      "state": "CONTRADICTED"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "a validator panel reads the goal and the evidence"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E3",
+        "text": "deployed to the test network only"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Tallyhall lets a community vote"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "return leader()[\"met\"] == result.calldata[\"met\"]"
+       }
+      ],
+      "state": "MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "class Tallyhall(gl.Contract)"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     }
+    }
+   },
+   "applicant": "dave",
+   "case_id": "HK04",
+   "claims": [
+    {
+     "claim": "Tallyhall is live on mainnet with 500 active users.",
+     "criterion_id": "deployment"
+    }
+   ],
+   "evidence": [
+    [
+     "hackathon/dave/README.md",
+     "REPOSITORY_README",
+     "README"
+    ],
+    [
+     "hackathon/dave/tallyhall.py",
+     "SOURCE_FILE",
+     "contract source"
+    ],
+    [
+     "hackathon/dave/deployment.txt",
+     "DEPLOYMENT_RECORD",
+     "deployment record"
+    ]
+   ],
+   "expected": [
+    "FAIL",
+    "CLAIM_CONTRADICTED",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "a claim the applicant's own deployment record contradicts: a critical failure that blocks the reward, bond returned",
+   "program": "hackathon",
+   "project_description": "Community judgment of whether a proposal met its goal.",
+   "project_name": "Tallyhall",
+   "submission_type": "PROJECT"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "asks a validator panel whether a delivered design matches its brief"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Verdictbox asks a validator panel"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E2",
+        "text": "return leader()[\"matches\"] == result.calldata[\"matches\"]"
+       }
+      ],
+      "state": "MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "All tests pass and the contract is ready to deploy"
+       },
+       {
+        "evidence_id": "E3",
+        "text": "7 passed, 4 failed in 2.9s"
+       }
+      ],
+      "state": "EVIDENCE_CONFLICTING"
+     }
+    }
+   },
+   "applicant": "bob",
+   "case_id": "HK05",
+   "claims": [],
+   "evidence": [
+    [
+     "hackathon/bob/verdictbox-README.md",
+     "REPOSITORY_README",
+     "README"
+    ],
+    [
+     "hackathon/bob/verdictbox.py",
+     "SOURCE_FILE",
+     "contract source"
+    ],
+    [
+     "hackathon/bob/verdictbox-tests.txt",
+     "TEST_REPORT",
+     "test report"
+    ]
+   ],
+   "expected": [
+    "CONFLICTING_EVIDENCE",
+    "REQUIRED_CRITERION_CONFLICTING",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "the README says every test passes; the test report shows four failures",
+   "program": "hackathon",
+   "project_description": "Checks a delivered design against its brief.",
+   "project_name": "Verdictbox",
+   "submission_type": "PROJECT"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "decides whether a community translation is faithful to its source text"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Lexicon decides whether a community translation is faithful"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "records a faithfulness verdict that the validators must agree on"
+       }
+      ],
+      "state": "MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     }
+    }
+   },
+   "appeal_answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Built for the GenLayer Judgment Hackathon"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "decides whether a community translation is faithful to its source text"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "deployment": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "documentation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Lexicon decides whether a community translation is faithful"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "genlayer_fit": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E4",
+        "text": "the faithfulness verdict must match; the explanation may differ"
+       }
+      ],
+      "state": "MET"
+     },
+     "implementation": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E5",
+        "text": "8 passed in 1.9s"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "appeal_expected": [
+    "PASS",
+    "MEETS_POLICY",
+    "TIER_C"
+   ],
+   "appeal_items": [
+    [
+     "hackathon/carol/lexicon-full.py",
+     "SOURCE_FILE",
+     "complete contract source"
+    ],
+    [
+     "hackathon/carol/lexicon-tests.txt",
+     "TEST_REPORT",
+     "test report"
+    ]
+   ],
+   "appeal_reason": "The first evaluation found the implementation unshown because the committed source was a stub. The complete source and its test report are attached.",
+   "applicant": "carol",
+   "case_id": "HK06",
+   "claims": [],
+   "evidence": [
+    [
+     "hackathon/carol/lexicon-README.md",
+     "REPOSITORY_README",
+     "README"
+    ],
+    [
+     "hackathon/carol/lexicon.py",
+     "SOURCE_FILE",
+     "contract source"
+    ]
+   ],
+   "expected": [
+    "INSUFFICIENT_EVIDENCE",
+    "REQUIRED_CRITERION_INSUFFICIENT",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "the committed source is a stub, so nothing shows the implementation; the appeal adds the complete source and a test report and passes",
+   "program": "hackathon",
+   "project_description": "Judges whether a community translation is faithful.",
+   "project_name": "Lexicon",
+   "submission_type": "PROJECT"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+Fairsplit deployment record
+
+This deployment record is a design mock-up; nothing has been deployed yet. The
+address shown in the demo video is a placeholder.

@@ -1,0 +1,5 @@
+Settlement adapter deployment record
+
+Network: GenLayer StudioNet (test network)
+The adapter contract deployed and finalized; its schema was read back and lists
+settle, refund and get_settlement.

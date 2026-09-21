@@ -1,0 +1,5 @@
+Tallyhall deployment record
+
+Network: GenLayer StudioNet (test network)
+Status: deployed to the test network only. There is no mainnet deployment yet,
+and no users outside the team have used it.

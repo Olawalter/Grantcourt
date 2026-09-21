@@ -1,0 +1,326 @@
+{
+ "cases": [
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "This tutorial shows how to decide which parts of those answers must match"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "K1": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "In direct mode, give the validator a leader result"
+       }
+      ],
+      "state": "SUPPORTED"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "which parts of those answers must match before the network accepts a result"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "completeness": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Step 3: test a disagreement"
+       }
+      ],
+      "state": "MET"
+     },
+     "technical_accuracy": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Explanations and wording will differ between models"
+       }
+      ],
+      "state": "MET"
+     },
+     "usefulness": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "give the validator a leader result with a different verdict and check that it votes no"
+       }
+      ],
+      "state": "MET"
+     }
+    }
+   },
+   "applicant": "alice",
+   "case_id": "CT01",
+   "claims": [
+    {
+     "claim": "The tutorial shows how to test a disagreement in direct mode.",
+     "criterion_id": "usefulness"
+    }
+   ],
+   "evidence": [
+    [
+     "contribution/alice/equivalence-tutorial.md",
+     "ARTICLE",
+     "tutorial"
+    ]
+   ],
+   "expected": [
+    "PASS",
+    "MEETS_POLICY",
+    "FULL"
+   ],
+   "milestone_id": "",
+   "notes": "an original, accurate tutorial",
+   "program": "contribution",
+   "project_description": "A step-by-step tutorial on picking what validators compare.",
+   "project_name": "Choosing an equivalence rule",
+   "submission_type": "TUTORIAL"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "Here is how agreement works on GenLayer"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A comparative rule lets each validator compute its own result and compare the fields that decide what happens"
+       },
+       {
+        "evidence_id": "E2",
+        "text": "A comparative rule lets each validator compute its own result and compare the fields that decide what happens"
+       }
+      ],
+      "state": "SIMILAR"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A strict rule requires the outputs to match exactly"
+       }
+      ],
+      "state": "RELEVANT"
+     },
+     "completeness": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "explanations and wording are allowed to differ"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     },
+     "technical_accuracy": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "A strict rule requires the outputs to match exactly"
+       }
+      ],
+      "state": "MET"
+     },
+     "usefulness": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_MET"
+     }
+    }
+   },
+   "applicant": "bob",
+   "case_id": "CT02",
+   "claims": [],
+   "evidence": [
+    [
+     "contribution/bob/equivalence-guide.md",
+     "ARTICLE",
+     "article"
+    ]
+   ],
+   "expected": [
+    "FAIL",
+    "SIMILAR_TO_SOURCE",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "a paragraph of the program's reference copied word for word, uncredited",
+   "program": "contribution",
+   "project_description": "A short guide to agreement on GenLayer.",
+   "project_name": "My guide to the equivalence principle",
+   "submission_type": "ARTICLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "This article compares staking yields"
+       }
+      ],
+      "state": "ELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "IRRELEVANT"
+     },
+     "completeness": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "technical_accuracy": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     },
+     "usefulness": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "EVIDENCE_INSUFFICIENT"
+     }
+    }
+   },
+   "applicant": "carol",
+   "case_id": "CT03",
+   "claims": [],
+   "evidence": [
+    [
+     "contribution/carol/staking-yields.md",
+     "ARTICLE",
+     "article"
+    ]
+   ],
+   "expected": [
+    "FAIL",
+    "OFF_TOPIC",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "a real article about something else: irrelevant, not insufficient",
+   "program": "contribution",
+   "project_description": "An article on staking yields.",
+   "project_name": "Maximising staking yields",
+   "submission_type": "ARTICLE"
+  },
+  {
+   "answer": {
+    "subjects": {
+     "ELIGIBILITY": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "I work on the GenLayer Labs staff as a core protocol engineer"
+       }
+      ],
+      "state": "INELIGIBLE"
+     },
+     "ORIGINALITY": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "ORIGINAL"
+     },
+     "RELEVANCE": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "a larger group of validators evaluates the transaction again"
+       }
+      ],
+      "state": "PARTIALLY_RELEVANT"
+     },
+     "completeness": {
+      "note": "fixture reading",
+      "quotes": [],
+      "state": "NOT_MET"
+     },
+     "technical_accuracy": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "anyone who disagrees can appeal during the appeal window"
+       }
+      ],
+      "state": "MET"
+     },
+     "usefulness": {
+      "note": "fixture reading",
+      "quotes": [
+       {
+        "evidence_id": "E1",
+        "text": "I want to explain appeals from the inside"
+       }
+      ],
+      "state": "PARTIALLY_MET"
+     }
+    }
+   },
+   "applicant": "dave",
+   "case_id": "CT04",
+   "claims": [],
+   "evidence": [
+    [
+     "contribution/dave/appeals-explained.md",
+     "ARTICLE",
+     "article"
+    ]
+   ],
+   "expected": [
+    "INELIGIBLE",
+    "INELIGIBLE_APPLICANT",
+    "NONE"
+   ],
+   "milestone_id": "",
+   "notes": "the applicant's own evidence shows the program's eligibility policy excludes it",
+   "program": "contribution",
+   "project_description": "Appeals on GenLayer from the inside.",
+   "project_name": "Appeals explained",
+   "submission_type": "ARTICLE"
+  }
+ ]
+}

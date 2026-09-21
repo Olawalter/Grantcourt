@@ -1,0 +1,7 @@
+Clauseguard direct-mode test report
+
+collected 14 items
+14 passed in 3.1s
+
+Covered: fair clause, unfair indemnity clause, unclear clause, a clause that
+contains an instruction to the model, and a malformed model answer.

@@ -1,0 +1,5 @@
+Settlement adapter deployment record
+
+Network: GenLayer StudioNet (test network)
+Status: the deploy transaction is still pending and no contract address exists
+yet. No test transaction has been sent.
