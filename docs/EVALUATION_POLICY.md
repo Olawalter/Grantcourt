@@ -78,7 +78,7 @@ Code-decided reasons first; the panel is not asked.
 | `PRIMARY_UNREADABLE` - too large, not UTF-8, or empty | INSUFFICIENT_EVIDENCE | no | returned |
 | `MANIPULATION` - an applicant item addresses the evaluator | FAIL | yes | forfeited |
 | `HIDDEN_TEXT` - an applicant item hides or reorders characters | INSUFFICIENT_EVIDENCE | no | returned |
-| `DUPLICATE_EVIDENCE` - an applicant item is a program reference, or passed for another applicant | FAIL | yes | forfeited |
+| `DUPLICATE_EVIDENCE` - an applicant item is a program reference, or another applicant filed it to the program first | FAIL | yes | forfeited |
 | `APPLICANT_MARK_MISSING` - the primary does not carry the applicant's address | INSUFFICIENT_EVIDENCE | no | returned |
 | `REQUIRED_EVIDENCE_UNAVAILABLE` - no item of a required category could be read | SOURCE_UNAVAILABLE | no | returned |
 

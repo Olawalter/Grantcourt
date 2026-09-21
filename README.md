@@ -33,7 +33,7 @@ DEPLOYMENT_PENDING
 | field limits, accepted submission types and evidence categories, required evidence present | each claim: supported, unsupported, contradicted |
 | URL admission, hash verification, unreadable or changed evidence | similarity to a reference source (shown from both sides) |
 | text addressed to the evaluator, hidden characters, the applicant mark | |
-| evidence that passed for another applicant, or that is a program reference | |
+| evidence another applicant filed first in the program, or that is a program reference | |
 | the score, the band or tranche, the status, the bond, the reservation, the ledger | |
 
 The model is never asked for a number. A criterion's score is its weight times 2 for MET, 1 for PARTIALLY_MET, 0 otherwise, normalised to 0-100 in integer arithmetic.
@@ -66,7 +66,7 @@ A changed policy is a new program with a higher `evaluation_policy_version` that
 | Status | When | Reward | Bond |
 |---|---|---|---|
 | `PASS` | eligible, relevant, not blocked by similarity, every required criterion MET, score at or above the threshold | the band's reward, or the milestone's tranche | returned |
-| `FAIL` | text addressed to the evaluator; evidence that passed for another applicant or is a program reference; a contradicted claim; off-topic; similar to a reference where that blocks; a required criterion not met; below the threshold | none | forfeited for manipulation and duplicate evidence, otherwise returned |
+| `FAIL` | text addressed to the evaluator; evidence another applicant filed first or that is a program reference; a contradicted claim; off-topic; similar to a reference where that blocks; a required criterion not met; below the threshold | none | forfeited for manipulation and duplicate evidence, otherwise returned |
 | `INELIGIBLE` | the builder's own evidence shows the eligibility policy is not met | none | returned |
 | `INSUFFICIENT_EVIDENCE` | unreadable primary, hidden characters, missing applicant mark, unverifiable eligibility or relevance, a required criterion the evidence does not establish | none | returned |
 | `CONFLICTING_EVIDENCE` | two of the builder's items materially contradict each other on a required criterion | none | returned |
@@ -170,7 +170,7 @@ submission_status, final, finalized_at, record_digest
 
 ## Originality: what it can and cannot tell
 
-- Evidence whose exact bytes are a reference the program fixed, or already passed for another applicant in the program: decided by code, a critical failure.
+- Evidence whose exact bytes are a reference the program fixed, or were first filed to the program by another applicant: decided by code, a critical failure. Ownership goes to the first to file, never the first to be evaluated, so a copier cannot take evidence by asking for its evaluation first.
 - Word-for-word repetition of a reference source: judged by the panel, and SIMILAR must quote a run of at least 12 consecutive words shared by the builder's item and the reference. Shared subject matter and terms are not similarity; paraphrase is not detected.
 - The program chooses the consequence: `SIMILAR_BLOCKS_REWARD` or `SIMILAR_RECORDED_ONLY`. Similarity is never an accusation of misconduct; only manipulation and duplicate evidence forfeit a bond.
 - Copies of anything else on the web: not seen.

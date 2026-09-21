@@ -241,8 +241,9 @@ EVALUATOR_MARKERS = (
     "instructions for validators", "grantcourt panel", "ignore the evaluation policy",
     "ignore the rubric", "approve this project", "approve this submission",
     "approve this application", "score this project", "score this submission",
-    "give this submission", "give this project", "award this project", "award this submission",
-    "mark this submission", "mark this project", "evaluate this submission as")
+    "give this submission a score", "give this project a score",
+    "give this submission full marks", "give this project full marks", "award this project",
+    "award this submission", "evaluate this submission as")
 
 # characters that hide or reorder text for a human reader while a parser sees it;
 # the zero-width joiner is left out because emoji sequences use it
@@ -632,10 +633,14 @@ def _json_list(text, cap: int):
 
 def _valid_ident(text) -> bool:
     """A criterion id: lowercase letters, digits and underscores, starting
-    with a letter. Uppercase is reserved for the built-in subjects and claims."""
+    with a letter, and never a built-in subject or a claim id in any case - the
+    model's keys are case-folded, so `relevance` would share a slot with
+    RELEVANCE and `k1` with K1."""
     if not isinstance(text, str) or text == "" or len(text) > IDENT_CAP:
         return False
     if not ("a" <= text[0] <= "z"):
+        return False
+    if text.upper() in BUILT_IN_SUBJECTS or _is_claim_id(text.upper()):
         return False
     for ch in text:
         if not (("a" <= ch <= "z") or ("0" <= ch <= "9") or ch == "_"):
@@ -792,6 +797,8 @@ def _parse_spec(text, now: str) -> tuple:
     if not _int_in(spec["per_applicant_limit"], 1, MAX_PER_APPLICANT):
         return ("per_applicant_limit must be an integer from 1 to " + str(MAX_PER_APPLICANT),
                 None)
+    if spec["per_applicant_limit"] < len(spec["milestones"]):
+        return ("per_applicant_limit must allow at least one filing per milestone", None)
     if not _atto_string(spec["submission_bond_atto"]) \
             or int(spec["submission_bond_atto"]) > BOND_CAP:
         return ("submission_bond_atto must be an atto amount string of at most "
@@ -1769,7 +1776,7 @@ class GrantCourt(gl.Contract):
     program_ids: DynArray[str]
     applicant_counts: TreeMap[str, u32]       # program|wallet -> submissions filed
     applicant_digests: TreeMap[str, str]      # program|wallet|url or sha256 -> submission
-    passed_digests: TreeMap[str, str]         # program|sha256 -> first submission passed on it
+    first_commits: TreeMap[str, str]          # program|sha256 -> first submission to commit it
     milestone_slots: TreeMap[str, str]        # program|wallet|milestone -> open or passed filing
     milestones_passed: TreeMap[str, u32]      # program|wallet -> milestones passed and final
     credits: TreeMap[str, u256]
@@ -1865,13 +1872,15 @@ class GrantCourt(gl.Contract):
 
     def _duplicates(self, sub: Submission, items: list, spec: dict) -> list:
         """Applicant items whose exact bytes are a reference source the program
-        fixed, or already passed for another applicant in this program."""
+        fixed, or were first committed to this program by another applicant.
+        Ownership goes to the first to file, never the first to pass: a copier
+        who files later cannot take the evidence by getting evaluated first."""
         refs = [s["sha256"] for s in spec["reference_sources"]]
         out = []
         for it in items:
             if it["role"] not in APPLICANT_ROLES:
                 continue
-            holder = self.passed_digests.get(str(sub.program_id) + "|" + it["sha256"])
+            holder = self.first_commits.get(str(sub.program_id) + "|" + it["sha256"])
             other = holder is not None and str(holder) != "" \
                 and str(self.submissions.get(str(holder)).applicant) != str(sub.applicant)
             if it["sha256"] in refs or other:
@@ -1945,17 +1954,38 @@ class GrantCourt(gl.Contract):
         eid = record["evaluation_id"]
         self.evaluations[eid] = _canonical(record)
         sub.evaluation_ids.append(eid)
-        for it in record["items"]:
+
+    def _commit_items(self, program_id: str, wallet: str, submission_id: str, entries: list):
+        """Record who committed which bytes: per applicant, to refuse the same
+        evidence in two live filings; per program, the first filing to commit
+        each digest, which owns it."""
+        key = program_id + "|" + wallet
+        for e in entries:
+            self.applicant_digests[key + "|" + e["url"]] = submission_id
+            self.applicant_digests[key + "|" + e["sha256"]] = submission_id
+            first = program_id + "|" + e["sha256"]
+            if self.first_commits.get(first) is None:
+                self.first_commits[first] = submission_id
+
+    def _committed_elsewhere(self, program_id: str, wallet: str, entry: dict,
+                             submission_id: str) -> bool:
+        key = program_id + "|" + wallet + "|"
+        for part in (entry["url"], entry["sha256"]):
+            holder = self.applicant_digests.get(key + part)
+            if holder is not None and str(holder) != "" and str(holder) != submission_id:
+                return True
+        return False
+
+    def _release_items(self, sub: Submission):
+        """A filing that settles without a pass frees its evidence for the same
+        applicant's next filing; ownership against other applicants stays."""
+        key = str(sub.program_id) + "|" + str(sub.applicant) + "|"
+        for it in self._items(sub):
             if it["role"] not in APPLICANT_ROLES:
                 continue
-            key = str(sub.program_id) + "|" + it["sha256"]
-            holder = self.passed_digests.get(key)
-            holder = None if holder is None or str(holder) == "" else str(holder)
-            if record["status"] == PASS and holder is None:
-                self.passed_digests[key] = str(sub.submission_id)
-            elif record["status"] != PASS and holder == str(sub.submission_id):
-                # an appeal that overturns a pass releases what it held
-                self.passed_digests[key] = ""
+            for part in (it["url"], it["sha256"]):
+                if str(self.applicant_digests.get(key + part)) == str(sub.submission_id):
+                    self.applicant_digests[key + part] = ""
 
     # -- writes: programs --------------------------------------------------------
 
@@ -2138,10 +2168,9 @@ class GrantCourt(gl.Contract):
             return ("this applicant has used its " + str(spec["per_applicant_limit"])
                     + " submissions to this program", None)
         for e in evidence:
-            for key in (e["url"], e["sha256"]):
-                if self.applicant_digests.get(program_id + "|" + wallet + "|" + key) is not None:
-                    return ("duplicate submission: this applicant already committed "
-                            + e["label"] + " to this program", None)
+            if self._committed_elsewhere(program_id, wallet, e, ""):
+                return ("duplicate submission: this applicant already committed "
+                        + e["label"] + " to this program", None)
         if len(program.submission_ids) >= MAX_SUBMISSIONS:
             return ("this program holds its maximum of submissions", None)
         reserve = _reservation(spec, milestone_id)
@@ -2202,9 +2231,7 @@ class GrantCourt(gl.Contract):
         key = program_id + "|" + wallet
         count = self.applicant_counts.get(key)
         self.applicant_counts[key] = u32((0 if count is None else int(count)) + 1)
-        for e in ok["evidence"]:
-            self.applicant_digests[key + "|" + e["url"]] = submission_id
-            self.applicant_digests[key + "|" + e["sha256"]] = submission_id
+        self._commit_items(program_id, wallet, submission_id, ok["evidence"])
         if milestone_id != "":
             self.milestone_slots[key + "|" + milestone_id] = submission_id
         return submission_id
@@ -2275,6 +2302,10 @@ class GrantCourt(gl.Contract):
                 self._fail(err)
             if e["url"] in seen or e["sha256"] in seen:
                 self._fail("an appeal item must be new evidence, not a repeat")
+            if self._committed_elsewhere(str(sub.program_id), str(sub.applicant), e,
+                                         str(sub.submission_id)):
+                self._fail("duplicate submission: this applicant already committed "
+                           + str(e["label"]) + " to this program")
             seen.append(e["url"])
             seen.append(e["sha256"])
         new_ids = []
@@ -2299,10 +2330,8 @@ class GrantCourt(gl.Contract):
         record["record_digest"] = _sha256_hex(_canonical(
             {k: record[k] for k in record if k != "record_digest"}))
         self._store_record(sub, record)
-        for e in added:
-            key = str(sub.program_id) + "|" + str(sub.applicant)
-            self.applicant_digests[key + "|" + e["url"]] = str(sub.submission_id)
-            self.applicant_digests[key + "|" + e["sha256"]] = str(sub.submission_id)
+        self._commit_items(str(sub.program_id), str(sub.applicant), str(sub.submission_id),
+                           added)
         sub.items = _canonical(items)
         sub.appeal = _canonical({"appellant": str(sub.applicant), "reason": reason,
                                  "added_items": new_ids, "filed_at": now,
@@ -2344,6 +2373,8 @@ class GrantCourt(gl.Contract):
         else:
             self._credit(str(sub.applicant), bond)
         self._settle_milestone(sub, record["status"] == PASS)
+        if record["status"] != PASS:
+            self._release_items(sub)
         sub.reserved_atto = u256(0)
         sub.reward_atto = u256(reward)
         sub.bond_outcome = record["bond_outcome"]
@@ -2385,6 +2416,7 @@ class GrantCourt(gl.Contract):
         self.bonds_total_atto = u256(int(self.bonds_total_atto) - bond)
         self._credit(str(sub.applicant), bond)
         self._settle_milestone(sub, False)
+        self._release_items(sub)
         sub.reserved_atto = u256(0)
         sub.bond_outcome = BOND_RETURN
         sub.finalized_at = now

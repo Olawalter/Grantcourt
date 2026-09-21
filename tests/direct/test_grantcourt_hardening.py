@@ -107,6 +107,9 @@ def _criteria(**change):
     ("criteria", _criteria(required="yes"), "required must be true or false"),
     ("criteria", _criteria(evidence_categories=["ARTICLE"]), "evidence_categories must list"),
     ("criteria", _criteria(extra=1), "each criterion must have exactly"),
+    ("criteria", _criteria(criterion_id="relevance"), "criterion ids must be distinct lowercase"),
+    ("criteria", _criteria(criterion_id="originality"), "criterion ids must be distinct"),
+    ("criteria", _criteria(criterion_id="k1"), "criterion ids must be distinct lowercase"),
     ("reward_bands", [], "reward_bands must list 1 to 4"),
     ("reward_bands", [{"label": "A", "min_score": 101, "reward_atto": "1"}],
      "band min_score must be an integer from 1 to 100"),
@@ -146,6 +149,7 @@ def test_malformed_criteria_bands_and_sources_are_refused(court, direct_vm, fiel
                      "tranche_atto": "0"}], "tranche_atto must be a positive"),
     ("reward_bands", [{"label": "A", "min_score": 60, "reward_atto": "1"}],
      "reward_bands must be empty"),
+    ("per_applicant_limit", 1, "must allow at least one filing per milestone"),
 ])
 def test_a_malformed_grant_constitution_is_refused(court, direct_vm, field, value, message):
     as_sender(direct_vm, "owner")
@@ -686,17 +690,24 @@ def test_an_applicant_cannot_take_down_its_evidence_and_appeal(court, direct_vm)
                     skip=("sources/hackathon/carol/lexicon_config.py",))
 
 
-def test_an_appeal_that_overturns_a_pass_releases_the_evidence(court, direct_vm):
+def test_a_filing_that_settles_without_a_pass_frees_its_evidence(court, direct_vm):
+    program_id = open_program(court, direct_vm)
+    sid = submit(court, direct_vm, program_id, "HK01")
+    evaluate(court, direct_vm, sid, subjects(implementation="NOT_MET"))
+    assert submit(court, direct_vm, program_id, "HK01").startswith("RETURNED: duplicate")
+    finalize_after_window(court, direct_vm, sid)
+    again = submit(court, direct_vm, program_id, "HK01")
+    assert again.startswith("GS-")
+    record = evaluate(court, direct_vm, again, answer_for("HK01"))
+    assert record["duplicate_items"] == [] and record["status"] == "PASS"
+
+
+def test_a_passed_filing_keeps_its_evidence(court, direct_vm):
     program_id = open_program(court, direct_vm)
     sid = submit(court, direct_vm, program_id, "HK01")
     evaluate(court, direct_vm, sid, answer_for("HK01"))
-    stage(direct_vm, subjects(implementation="NOT_MET"))
-    as_sender(direct_vm, "alice")
-    court.appeal(sid, "I want a second look", "[]")
-    assert court.get_evaluation(sid)["status"] == "FAIL"
-    other = submit(court, direct_vm, program_id, "HK01", applicant="bob")
-    record = evaluate(court, direct_vm, other, None)
-    assert record["reason_code"] == "APPLICANT_MARK_MISSING"
+    finalize_after_window(court, direct_vm, sid)
+    assert submit(court, direct_vm, program_id, "HK01").startswith("RETURNED: duplicate")
 
 
 # == stalls, finality and the ledger =========================================================================

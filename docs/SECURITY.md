@@ -85,11 +85,18 @@ The ratified payload is gated again by the contract before anything is stored.
   twice to one program (`applicant_digests`).
 - **Evidence amplification.** One application cannot repeat a url or digest,
   so one item never counts as two sources.
-- **Reused evidence.** Evidence whose bytes already passed for another
-  applicant in the program, or that is a program reference, is
-  `DUPLICATE_EVIDENCE` - a critical failure, bond forfeited. An appeal that
-  overturns a pass releases what it held. Evidence that was filed but never
-  passed is held against no one, so an early copy cannot block the author.
+- **Reused evidence.** Evidence whose bytes another applicant filed to the
+  program first, or that is a program reference, is `DUPLICATE_EVIDENCE` - a
+  critical failure, bond forfeited. Ownership goes to the first to file, never
+  the first to pass: a copier who re-files an applicant's evidence and asks for
+  its own evaluation first is the duplicate, and the author is unaffected. What
+  this cannot stop is a copier who files public evidence before its author
+  does; the applicant mark on the primary item is the defence there, since a
+  copier cannot make the author's primary carry the copier's address.
+- **One work paid twice.** Evidence a live filing committed cannot be filed
+  again or added through another filing's appeal by the same applicant. A
+  filing that settles without a pass frees its evidence for the applicant's
+  next filing.
 - **Replayed transactions.** Each state transition checks the current status:
   an application is evaluated once, appealed once, finalized once; a
   withdrawal clears the ledger before the transfer.
@@ -140,6 +147,6 @@ claimable credits (`get_stats`), and the live run checks it against the chain.
 never an accusation of misconduct. `CONTRADICTED` must quote the applicant's
 own evidence showing the claim false, and it blocks the reward without
 forfeiting the bond. Only manipulation (text addressed to the evaluator) and
-duplicate evidence (bytes that passed for someone else, or the program's own
+duplicate evidence (bytes another applicant filed first, or the program's own
 reference) forfeit a bond - both decided by code, not by a model's opinion.
 A model can still be wrong about a claim; the appeal exists for that.

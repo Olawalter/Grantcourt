@@ -26,9 +26,11 @@ leaders, disagreeing validators), `tests/direct/test_grantcourt_hardening.py`
 | Attack | Case or test | Expected | Property |
 |---|---|---|---|
 | fake deployment evidence | AD08 | FAIL / CLAIM_CONTRADICTED, critical | a claim the evidence contradicts blocks the reward |
-| evidence that passed for another applicant | `test_evidence_that_passed_for_another_applicant...` | FAIL / DUPLICATE_EVIDENCE, bond forfeited | no cross-submission contamination |
+| evidence another applicant filed first, whether or not it passed | `test_evidence_that_passed_for_another_applicant...`, `test_evidence_first_filed_by_another...` | FAIL / DUPLICATE_EVIDENCE, bond forfeited | no cross-submission contamination |
+| a copier filing later and asking for evaluation first | `test_evidence_belongs_to_the_first_to_file...` | the copier is DUPLICATE_EVIDENCE; the author passes | the first filer owns its evidence |
+| one work paid twice through an appeal | `test_an_appeal_cannot_add_evidence_from_the_applicants_other_filing` | appeal refused | evidence a live filing committed cannot join another |
 | the program's own reference passed off as work | AD07 | FAIL / DUPLICATE_EVIDENCE | reference bytes are not the applicant's |
-| evidence filed early by a copier but never passed | `test_evidence_filed_but_not_passed...` | not held against the author | a copy cannot block the author |
+| ordinary README text such as "give this project a star" | `test_marker_phrases_do_not_catch_ordinary_readme_text` | not manipulation | marker phrases are narrow |
 | evidence altered after filing | `test_evidence_altered_after_filing...`, `test_a_changed_primary...` | HASH_MISMATCH, never read | the committed bytes are the evidence |
 | one item repeated to count twice | hardening: "evidence must not repeat" | refused, bond returned | no evidence amplification |
 | an applicant taking down evidence to appeal | `test_an_applicant_cannot_take_down...` | appeal refused | an appeal never judges less |

@@ -12,7 +12,7 @@ cases: the diagnostic pass. The programs are created and funded, every
        per-node stdout ([DISAGREE], [MINE], [DOWNGRADE]) is recorded, so a
        split names its cause. Written to deploy/diagnostics/.
 full:  the live run of record. The same cases, plus the applicant's appeal
-       with new evidence, evidence that passed for one applicant filed by
+       with new evidence, evidence one applicant filed, filed again by
        another, refusals sent as real transactions, finalization of every
        evaluated submission after its window, the builder grant's second
        milestone filed only after the first settled, a stall exit, every
@@ -429,14 +429,9 @@ def run_cases(ac: dict, raw: str, full: bool, only: list = None) -> dict:
                                   evidence(case["appeal_items"], raw)])
                 outcome(ac, case_id + ":appeal", sid, case["appeal_expected"], step["tx"])
     if full:
-        if T["outcomes"]["HK01"]["held"]:
-            # the evidence that passed for alice, filed by bob
-            file_and_evaluate(ac, pids["hackathon"], "HK01", raw, key="DUP", applicant="bob",
-                              expected=["FAIL", "DUPLICATE_EVIDENCE", "NONE"])
-        else:
-            T.setdefault("notes", []).append("HK01 did not pass live, so the reused-evidence "
-                                             "case had no passed evidence to reuse; it is "
-                                             "covered by the Direct Mode suite only")
+        # the evidence alice filed, filed again by bob: the first filer owns it
+        file_and_evaluate(ac, pids["hackathon"], "HK01", raw, key="DUP", applicant="bob",
+                          expected=["FAIL", "DUPLICATE_EVIDENCE", "NONE"])
     return pids
 
 
