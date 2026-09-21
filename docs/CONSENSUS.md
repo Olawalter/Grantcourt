@@ -113,7 +113,7 @@ side's findings:
 | `evidence_sufficiency`, `source_reachability` | the brief's distinction between insufficient, unavailable and conflicting evidence |
 | `originality_band` | a recorded or blocking similarity |
 | `critical_failure`, `bond_outcome` | what a failure costs |
-| `required_criteria` | the state of every required criterion |
+| `required_criteria` | the state of every required criterion - when the outcome was decided at the criteria step (`CRITERIA_DECIDED`); after an earlier reason decided it, the states are recorded but cannot change the outcome and are not compared |
 | `contradicted_claims` | which claims were found false |
 
 ## Allowed validator differences
@@ -141,4 +141,36 @@ it blocks the reward - and it never pays.
 
 ## Live diagnostic findings
 
-DIAGNOSTIC_PENDING
+Two disposable deployments, never the deployment of record, carried the
+diagnostic passes (`deploy/diagnostics/`).
+
+**Pass 1** - `0xEd3e3806DaA012e73C709fDe0045aDf0dDa96E89`, fixtures at commit
+`9ccfb23`, 63 transactions from 2026-09-21T17:58:18Z to 2026-09-21T19:10:55Z.
+All 21 catalogue cases filed and evaluated once (`cases_0xed3e3806.json`).
+16 held. All 8 code-decided outcomes held. Three rounds did not reach a
+majority on their first attempt and were asked again; each then settled.
+
+| Case | Expected | Observed | Cause | Change |
+|---|---|---|---|---|
+| CT01, CT02, CT03 | PASS; FAIL / SIMILAR_TO_SOURCE; FAIL / OFF_TOPIC | INSUFFICIENT_EVIDENCE / ELIGIBILITY_UNVERIFIABLE | the contribution program's eligibility policy only excludes staff; most models read "nothing about staff" as unverifiable, which blocks every honest applicant | the prompt now says a policy that only excludes requires nothing to be shown: when nothing shows the exclusion applies, the applicant is ELIGIBLE, quoting the passage that identifies the applicant or the work; UNVERIFIABLE is kept for a policy that requires the evidence to show something |
+| HK05 | CONFLICTING_EVIDENCE | FAIL / REQUIRED_CRITERION_NOT_MET | a README saying every test passes against a report showing four failures was read as the implementation PARTIALLY_MET; one validator read it CONFLICTING and was outvoted | EVIDENCE_CONFLICTING is now defined as two applicant items stating opposite facts, with that example, and the prompt says the contradiction is the finding, not a partial score |
+| HK06 | INSUFFICIENT_EVIDENCE | FAIL / REQUIRED_CRITERION_NOT_MET | a fixture fault: the committed "source" was a stub that said the method was not written - evidence the criterion is not met, so the panel was right | the fixture's committed source file now only points elsewhere, which neither shows nor rules out the implementation |
+
+The rejected rounds showed a second point. In two of them (AD08, CT03) the
+validators agreed on the status and the reason but read a required criterion
+differently, and the comparison of required-criterion states refused the round
+although those states could not change an outcome already decided by an earlier
+reason. `required_criteria` is now compared only when the outcome was decided
+at the criteria step (`CRITERIA_DECIDED`).
+
+**Pass 2** - `0x27674f329564F6cBC7f808a2A61a455aeC34eaEE`, the prompt changes,
+fixtures at commit `e979504`: the five cases re-run
+(`cases_0x27674f32.json`). CT01 PASS / FULL, CT02 FAIL / SIMILAR_TO_SOURCE,
+CT03 FAIL / OFF_TOPIC and HK05 CONFLICTING_EVIDENCE held, with no rejected
+round. HK06 read PARTIALLY_MET against a configuration file whose constants
+suggested part of an implementation; with the pointer file at commit `b04a25a`
+it read EVIDENCE_INSUFFICIENT and held (`cases_0x27674f32_hk06.json`).
+
+The comparison change for `required_criteria` came after pass 2 and is covered
+by the Direct Mode suite and two mutations; the live run of record exercises
+it on the deployment of record.

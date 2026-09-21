@@ -139,6 +139,9 @@ CRITICAL_REASONS = ("MANIPULATION", "DUPLICATE_EVIDENCE", "CLAIM_CONTRADICTED")
 # a deliberate act - steering the panel, passing off work that already passed -
 # also forfeits the bond; a contradicted claim blocks the reward only
 FORFEIT_REASONS = ("MANIPULATION", "DUPLICATE_EVIDENCE")
+# the reasons reached at the criteria step, where each required criterion's state matters
+CRITERIA_DECIDED = ("REQUIRED_CRITERION_CONFLICTING", "REQUIRED_CRITERION_INSUFFICIENT",
+                    "REQUIRED_CRITERION_NOT_MET", "BELOW_THRESHOLD", "MEETS_POLICY")
 
 ROLE_PRIMARY = "PRIMARY"          # the first evidence item the applicant commits
 ROLE_EVIDENCE = "EVIDENCE"        # the applicant's other evidence
@@ -1552,8 +1555,11 @@ def _derive(ctx: dict, payload: dict) -> dict:
         "originality_band": originality,
         "critical_failure": reason in CRITICAL_REASONS,
         "bond_outcome": BOND_FORFEIT if reason in FORFEIT_REASONS else BOND_RETURN,
+        # required-criterion states are part of the consequence only when the
+        # outcome was decided at the criteria step; an earlier reason makes them moot
         "required_criteria": {c["criterion_id"]: _state_of(payload, c["criterion_id"])
-                              for c in ctx["criteria"] if c["required"]},
+                              for c in ctx["criteria"] if c["required"]}
+        if reason in CRITERIA_DECIDED else {},
         "contradicted_claims": [k["claim_id"] for k in ctx["claims"]
                                 if _state_of(payload, k["claim_id"]) == CONTRADICTED],
     }

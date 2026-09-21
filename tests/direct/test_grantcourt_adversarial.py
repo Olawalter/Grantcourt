@@ -379,3 +379,24 @@ def test_a_leader_misreporting_a_withheld_reference_is_outvoted(court, direct_vm
     leader["markers"] = []
     stage(direct_vm, answer_for("HK01"), override=override)
     assert validate(direct_vm, mod, leader) is False
+
+
+def test_required_criteria_are_not_compared_once_an_earlier_reason_decided(court, direct_vm,
+                                                                         mod):
+    """A contradicted claim decides the outcome before the criteria step; two
+    validators agreeing on that but reading a required criterion differently
+    still agree."""
+    program_id = open_program(court, direct_vm)
+    sid = submit(court, direct_vm, program_id, "HK04")
+    record = evaluate(court, direct_vm, sid, answer_for("HK04"))
+    assert record["required_criteria"] == {}
+    leader = captured_payload(direct_vm)
+    answer = answer_for("HK04")
+    answer["subjects"]["implementation"] = {"state": "NOT_MET", "quotes": []}
+    stage(direct_vm, answer)
+    assert validate(direct_vm, mod, leader) is True
+
+
+def test_required_criteria_are_recorded_when_the_criteria_decided(court, direct_vm):
+    _sid, record = hk01(court, direct_vm)
+    assert record["required_criteria"] == {"genlayer_fit": "MET", "implementation": "MET"}

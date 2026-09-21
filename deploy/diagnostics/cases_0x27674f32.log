@@ -1,0 +1,40 @@
+wallets: owner 0x8492f4abc3c9a219026461884301157c9b08e9da, alice 0x2181588581f943be374fbde775cd83c4c4b2bbcc, bob 0x6ce54b4c551df40808742703fa435e52b88d621f, carol 0xab3f2d7623616c0fda9a73a748ca99282d22085d, dave 0xa364569af5bdaf78e8aa1773416a16a496228668, erin 0xd1fbaafefdc4670a533c2a96f07df10479fd00a6, stranger 0x85da853fdf9a318517781b732c7db3ce9892fe73
+  verified 48 source locations against local bytes
+  owner.create_program tx 0xa55440be3dc541dae1541b409e4a2351ceff9cafd76ba067a261051df3cc5535
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.fund_program tx 0x887c0dfdfe97317b832d223a272162b5870b5fbff9d6f456bffe7d282f5510d5
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  owner.activate_program tx 0xfcc151dc514325e1e3e7a3a06d2d2518944f63d08c7fc6040631963909046639
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.create_program tx 0x89711efb7c80440dc627da30357949ab8279633fbc4c451fb7e910c400afcf3b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.fund_program tx 0xcac9fa79601b005b3c514fecdce91e11e452542dd8d8ffb5da455a5ff26441ee
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  owner.activate_program tx 0x7d1fe724d6e80a3aea5664534636dd8f86cbd7a912038af19e054769947db593
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  bob.submit tx 0xc14cf60ab8062405b2fefb3febf2b8eeb08879b9c6b36d9790285b2e9815dbfd
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  owner.request_evaluation tx 0xfdfed90c23a975af6fbe9fd324567bd03059cf2d7f670e72e262917819cbe81b
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  HK05: CONFLICTING_EVIDENCE / REQUIRED_CRITERION_CONFLICTING / NONE (PANEL) held=True
+  carol.submit tx 0xdc64d387f0749277c3187a0ffbda183c347230cb32a893616ca4f0516d7d67a8
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  owner.request_evaluation tx 0xc4e920dce67c90f8fb6628d685ea66d3b3cf4b893c416a7c114e425223b7fa2b
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'IDLE', 'AGREE']
+  HK06: FAIL / REQUIRED_CRITERION_NOT_MET / NONE (PANEL) held=False
+  alice.submit tx 0x4f671f5034fafeee9d06abec51c796509376f424d0cf55d76caa99095a6af9c7
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.request_evaluation tx 0x62939761ce28c2ad2a58c3bde1e0a37cc9373c077ca21d3fca03b56c9d1c185b
+    FINALIZED leader SUCCESS votes ['AGREE', 'DISAGREE', 'AGREE', 'DISAGREE', 'AGREE']
+  CT01: PASS / MEETS_POLICY / FULL (PANEL) held=True
+  bob.submit tx 0xa9c47dfe7ee9c1b2c308a5458611cde004a4faf4c64da2d63c4fffd755feb23f
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  owner.request_evaluation tx 0x227c6dde7e6a6feca73fded98fa7806a5c83a99abf91d1f7264df9d297c368af
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'DISAGREE', 'AGREE']
+  CT02: FAIL / SIMILAR_TO_SOURCE / NONE (PANEL) held=True
+  carol.submit tx 0xa6488a401c082fde6684bcb01f5c95ee558311dd8fd26b2d644314fbd8d3aa50
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'IDLE', 'IDLE']
+  owner.request_evaluation tx 0xfc8fa9b024f695d2d7558120cad6c30bf9b03c30a98ab2703818d8daf456abae
+    FINALIZED leader SUCCESS votes ['AGREE', 'IDLE', 'AGREE', 'DISAGREE', 'AGREE']
+  CT03: FAIL / OFF_TOPIC / NONE (PANEL) held=True
+DONE {"held": ["CT01", "CT02", "CT03", "HK05"], "not_held": ["HK06"]}

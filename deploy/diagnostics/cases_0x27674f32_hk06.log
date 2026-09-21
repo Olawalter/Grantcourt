@@ -1,0 +1,14 @@
+wallets: owner 0x8492f4abc3c9a219026461884301157c9b08e9da, alice 0x2181588581f943be374fbde775cd83c4c4b2bbcc, bob 0x6ce54b4c551df40808742703fa435e52b88d621f, carol 0xab3f2d7623616c0fda9a73a748ca99282d22085d, dave 0xa364569af5bdaf78e8aa1773416a16a496228668, erin 0xd1fbaafefdc4670a533c2a96f07df10479fd00a6, stranger 0x85da853fdf9a318517781b732c7db3ce9892fe73
+  verified 48 source locations against local bytes
+  owner.create_program tx 0x17c2ce24adbc4e0c084ad6f243317cdade07debc59ffa26d44cbba4efbff5113
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.fund_program tx 0x2da4afe7063b24e23f08dcb9726659b3e971c5f2352e2aa13bf3cc9ece3092af
+    FINALIZED leader SUCCESS votes ['IDLE', 'IDLE', 'AGREE', 'AGREE', 'AGREE']
+  owner.activate_program tx 0xd198f0ad7cf4bdd26328b5624845de63a7fd6ae105944cdc79947f84217e3c0a
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+  carol.submit tx 0x79d7d597113ecdf101518f1c902c6d23129f831364c342b162fb6e2a262988e4
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  owner.request_evaluation tx 0xf88f68d1df7f53f8eab7df912e782377783ca0152e964706886a63ee55a87f80
+    FINALIZED leader SUCCESS votes ['AGREE', 'DISAGREE', 'DISAGREE', 'AGREE', 'AGREE']
+  HK06: INSUFFICIENT_EVIDENCE / REQUIRED_CRITERION_INSUFFICIENT / NONE (PANEL) held=True
+DONE {"held": ["HK06"], "not_held": []}

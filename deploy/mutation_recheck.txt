@@ -6,3 +6,9 @@ killed:   a similarity needs thirteen shared words
 killed:   a reference source counts as the applicant's evidence
 
 mutations: 3 killed, 0 survived, 0 anchor missing
+
+# re-run 2 (after diagnostic round 1): the two guards added for comparing required criteria only at the criteria step
+killed:   required criteria are compared after an earlier reason decided
+killed:   required criteria are never compared
+
+mutations: 2 killed, 0 survived, 0 anchor missing

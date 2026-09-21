@@ -125,6 +125,10 @@ MUTATIONS = [
     m("no failure is critical", '"critical_failure": reason in CRITICAL_REASONS,',
       '"critical_failure": False,'),
     # -- consensus ----------------------------------------------------------------------
+    m("required criteria are compared after an earlier reason decided",
+      "        if reason in CRITERIA_DECIDED else {},\n", "        if True else {},\n"),
+    m("required criteria are never compared",
+      "        if reason in CRITERIA_DECIDED else {},\n", "        if False else {},\n"),
     m("the consequence is not compared",
       '        if mine[key] != theirs[key]:\n            return key + " mine="',
       '        if False:\n            return key + " mine="'),
