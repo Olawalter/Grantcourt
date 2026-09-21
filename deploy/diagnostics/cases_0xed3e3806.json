@@ -1,0 +1,3981 @@
+{
+  "address": "0xEd3e3806DaA012e73C709fDe0045aDf0dDa96E89",
+  "constitutions": {
+    "adv-1": {
+      "accepted_submission_types": [
+        "PROJECT"
+      ],
+      "allowed_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE",
+        "DEPLOYMENT_RECORD",
+        "DOCUMENTATION",
+        "TEST_REPORT",
+        "SCREENSHOT_TRANSCRIPT"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "genlayer_fit",
+          "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "REPOSITORY_README"
+          ],
+          "name": "Meaningful GenLayer usage",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "implementation",
+          "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "TEST_REPORT",
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Functional implementation",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "documentation",
+          "description": "A new builder can understand what the project does and how to run it.",
+          "evidence_categories": [
+            "REPOSITORY_README",
+            "DOCUMENTATION"
+          ],
+          "name": "Documentation quality",
+          "required": false,
+          "weight": 20
+        },
+        {
+          "criterion_id": "deployment",
+          "description": "The project is deployed to a GenLayer network and has been used at least once.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Evidence of deployment",
+          "required": false,
+          "weight": 20
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+      "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "HACKATHON",
+      "reference_sources": [
+        {
+          "label": "hackathon starter kit README",
+          "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/9ccfb239d86d3bbebfe0cc10a855595b4e86b814/fixtures/sources/references/starter-kit-readme.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE"
+      ],
+      "reward_bands": [
+        {
+          "label": "TIER_A",
+          "min_score": 90,
+          "reward_atto": "6000000000000000"
+        },
+        {
+          "label": "TIER_B",
+          "min_score": 75,
+          "reward_atto": "4000000000000000"
+        },
+        {
+          "label": "TIER_C",
+          "min_score": 60,
+          "reward_atto": "2000000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "500000000000000",
+      "supersedes": "",
+      "title": "GenLayer Judgment Hackathon (adv-1)"
+    },
+    "adv-2": {
+      "accepted_submission_types": [
+        "PROJECT"
+      ],
+      "allowed_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE",
+        "DEPLOYMENT_RECORD",
+        "DOCUMENTATION",
+        "TEST_REPORT",
+        "SCREENSHOT_TRANSCRIPT"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "genlayer_fit",
+          "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "REPOSITORY_README"
+          ],
+          "name": "Meaningful GenLayer usage",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "implementation",
+          "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "TEST_REPORT",
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Functional implementation",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "documentation",
+          "description": "A new builder can understand what the project does and how to run it.",
+          "evidence_categories": [
+            "REPOSITORY_README",
+            "DOCUMENTATION"
+          ],
+          "name": "Documentation quality",
+          "required": false,
+          "weight": 20
+        },
+        {
+          "criterion_id": "deployment",
+          "description": "The project is deployed to a GenLayer network and has been used at least once.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Evidence of deployment",
+          "required": false,
+          "weight": 20
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+      "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "HACKATHON",
+      "reference_sources": [
+        {
+          "label": "hackathon starter kit README",
+          "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/9ccfb239d86d3bbebfe0cc10a855595b4e86b814/fixtures/sources/references/starter-kit-readme.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE"
+      ],
+      "reward_bands": [
+        {
+          "label": "TIER_A",
+          "min_score": 90,
+          "reward_atto": "6000000000000000"
+        },
+        {
+          "label": "TIER_B",
+          "min_score": 75,
+          "reward_atto": "4000000000000000"
+        },
+        {
+          "label": "TIER_C",
+          "min_score": 60,
+          "reward_atto": "2000000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "500000000000000",
+      "supersedes": "",
+      "title": "GenLayer Judgment Hackathon (adv-2)"
+    },
+    "adv-3": {
+      "accepted_submission_types": [
+        "PROJECT"
+      ],
+      "allowed_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE",
+        "DEPLOYMENT_RECORD",
+        "DOCUMENTATION",
+        "TEST_REPORT",
+        "SCREENSHOT_TRANSCRIPT"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "genlayer_fit",
+          "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "REPOSITORY_README"
+          ],
+          "name": "Meaningful GenLayer usage",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "implementation",
+          "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "TEST_REPORT",
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Functional implementation",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "documentation",
+          "description": "A new builder can understand what the project does and how to run it.",
+          "evidence_categories": [
+            "REPOSITORY_README",
+            "DOCUMENTATION"
+          ],
+          "name": "Documentation quality",
+          "required": false,
+          "weight": 20
+        },
+        {
+          "criterion_id": "deployment",
+          "description": "The project is deployed to a GenLayer network and has been used at least once.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Evidence of deployment",
+          "required": false,
+          "weight": 20
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+      "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "HACKATHON",
+      "reference_sources": [
+        {
+          "label": "hackathon starter kit README",
+          "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/9ccfb239d86d3bbebfe0cc10a855595b4e86b814/fixtures/sources/references/starter-kit-readme.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE"
+      ],
+      "reward_bands": [
+        {
+          "label": "TIER_A",
+          "min_score": 90,
+          "reward_atto": "6000000000000000"
+        },
+        {
+          "label": "TIER_B",
+          "min_score": 75,
+          "reward_atto": "4000000000000000"
+        },
+        {
+          "label": "TIER_C",
+          "min_score": 60,
+          "reward_atto": "2000000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "500000000000000",
+      "supersedes": "",
+      "title": "GenLayer Judgment Hackathon (adv-3)"
+    },
+    "contribution": {
+      "accepted_submission_types": [
+        "TUTORIAL",
+        "ARTICLE",
+        "TRANSLATION"
+      ],
+      "allowed_evidence_categories": [
+        "ARTICLE",
+        "DOCUMENTATION",
+        "OTHER"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "technical_accuracy",
+          "description": "What the contribution says about GenLayer's equivalence rules is correct.",
+          "evidence_categories": [
+            "ARTICLE"
+          ],
+          "name": "Technical accuracy",
+          "required": true,
+          "weight": 40
+        },
+        {
+          "criterion_id": "usefulness",
+          "description": "A builder could act on it: it gives steps or an example.",
+          "evidence_categories": [
+            "ARTICLE"
+          ],
+          "name": "Usefulness",
+          "required": false,
+          "weight": 30
+        },
+        {
+          "criterion_id": "completeness",
+          "description": "It covers what to compare, what to let differ, and how to test the rule.",
+          "evidence_categories": [
+            "ARTICLE"
+          ],
+          "name": "Completeness",
+          "required": false,
+          "weight": 30
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "Rewards for tutorials and articles that teach builders how to choose an equivalence rule for an Intelligent Contract.",
+      "eligibility_policy": "Open to community members. Members of the GenLayer Labs staff are not eligible.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "CONTRIBUTION",
+      "reference_sources": [
+        {
+          "label": "equivalence principle overview",
+          "sha256": "d3f7b7850af9a7ab6812f71c4acdbd7c930ba795074bb6fa32debbd326700123",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/9ccfb239d86d3bbebfe0cc10a855595b4e86b814/fixtures/sources/references/equivalence-principle-overview.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "ARTICLE"
+      ],
+      "reward_bands": [
+        {
+          "label": "FULL",
+          "min_score": 60,
+          "reward_atto": "2500000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "200000000000000",
+      "supersedes": "",
+      "title": "Ecosystem tutorials: equivalence rules (contribution)"
+    },
+    "grant": {
+      "accepted_submission_types": [
+        "MILESTONE_DELIVERABLE"
+      ],
+      "allowed_evidence_categories": [
+        "MILESTONE_REPORT",
+        "DEPLOYMENT_RECORD",
+        "TRANSACTION_RECORD",
+        "DOCUMENTATION"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "milestone_delivered",
+          "description": "The evidence shows the milestone's definition is satisfied in full, not only announced in the report.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD",
+            "TRANSACTION_RECORD",
+            "DOCUMENTATION"
+          ],
+          "name": "Milestone delivered",
+          "required": true,
+          "weight": 60
+        },
+        {
+          "criterion_id": "evidence_quality",
+          "description": "The report points to concrete evidence a reviewer can check.",
+          "evidence_categories": [],
+          "name": "Evidence quality",
+          "required": false,
+          "weight": 40
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A two-milestone builder grant for a settlement adapter contract and its integration documentation.",
+      "eligibility_policy": "Only the named grantee. Each milestone report must identify the grant as the settlement adapter grant.",
+      "evaluation_policy_version": 1,
+      "grantee": "0xd1fbaafefdc4670a533c2a96f07df10479fd00a6",
+      "milestones": [
+        {
+          "definition": "Deploy the settlement adapter contract to the test network and show one successful settlement transaction through it.",
+          "milestone_id": "M1",
+          "title": "Adapter deployed to the test network",
+          "tranche_atto": "5000000000000000"
+        },
+        {
+          "definition": "Publish integration documentation covering installation, the settle and refund calls, error handling and a worked example.",
+          "milestone_id": "M2",
+          "title": "Integration documentation published",
+          "tranche_atto": "3000000000000000"
+        }
+      ],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_RECORDED_ONLY",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "GRANT_MILESTONE",
+      "reference_sources": [],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "MILESTONE_REPORT"
+      ],
+      "reward_bands": [],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "0",
+      "supersedes": "",
+      "title": "Builder grant: settlement adapter (grant)"
+    },
+    "grant-b": {
+      "accepted_submission_types": [
+        "MILESTONE_DELIVERABLE"
+      ],
+      "allowed_evidence_categories": [
+        "MILESTONE_REPORT",
+        "DEPLOYMENT_RECORD",
+        "TRANSACTION_RECORD",
+        "DOCUMENTATION"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "milestone_delivered",
+          "description": "The evidence shows the milestone's definition is satisfied in full, not only announced in the report.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD",
+            "TRANSACTION_RECORD",
+            "DOCUMENTATION"
+          ],
+          "name": "Milestone delivered",
+          "required": true,
+          "weight": 60
+        },
+        {
+          "criterion_id": "evidence_quality",
+          "description": "The report points to concrete evidence a reviewer can check.",
+          "evidence_categories": [],
+          "name": "Evidence quality",
+          "required": false,
+          "weight": 40
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A two-milestone builder grant for a settlement adapter contract and its integration documentation.",
+      "eligibility_policy": "Only the named grantee. Each milestone report must identify the grant as the settlement adapter grant.",
+      "evaluation_policy_version": 1,
+      "grantee": "0xd1fbaafefdc4670a533c2a96f07df10479fd00a6",
+      "milestones": [
+        {
+          "definition": "Deploy the settlement adapter contract to the test network and show one successful settlement transaction through it.",
+          "milestone_id": "M1",
+          "title": "Adapter deployed to the test network",
+          "tranche_atto": "5000000000000000"
+        },
+        {
+          "definition": "Publish integration documentation covering installation, the settle and refund calls, error handling and a worked example.",
+          "milestone_id": "M2",
+          "title": "Integration documentation published",
+          "tranche_atto": "3000000000000000"
+        }
+      ],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_RECORDED_ONLY",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "GRANT_MILESTONE",
+      "reference_sources": [],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "MILESTONE_REPORT"
+      ],
+      "reward_bands": [],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "0",
+      "supersedes": "",
+      "title": "Builder grant: settlement adapter (grant-b)"
+    },
+    "hackathon": {
+      "accepted_submission_types": [
+        "PROJECT"
+      ],
+      "allowed_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE",
+        "DEPLOYMENT_RECORD",
+        "DOCUMENTATION",
+        "TEST_REPORT",
+        "SCREENSHOT_TRANSCRIPT"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "genlayer_fit",
+          "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "REPOSITORY_README"
+          ],
+          "name": "Meaningful GenLayer usage",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "implementation",
+          "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "TEST_REPORT",
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Functional implementation",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "documentation",
+          "description": "A new builder can understand what the project does and how to run it.",
+          "evidence_categories": [
+            "REPOSITORY_README",
+            "DOCUMENTATION"
+          ],
+          "name": "Documentation quality",
+          "required": false,
+          "weight": 20
+        },
+        {
+          "criterion_id": "deployment",
+          "description": "The project is deployed to a GenLayer network and has been used at least once.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Evidence of deployment",
+          "required": false,
+          "weight": 20
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+      "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "HACKATHON",
+      "reference_sources": [
+        {
+          "label": "hackathon starter kit README",
+          "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/9ccfb239d86d3bbebfe0cc10a855595b4e86b814/fixtures/sources/references/starter-kit-readme.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE"
+      ],
+      "reward_bands": [
+        {
+          "label": "TIER_A",
+          "min_score": 90,
+          "reward_atto": "6000000000000000"
+        },
+        {
+          "label": "TIER_B",
+          "min_score": 75,
+          "reward_atto": "4000000000000000"
+        },
+        {
+          "label": "TIER_C",
+          "min_score": 60,
+          "reward_atto": "2000000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "500000000000000",
+      "supersedes": "",
+      "title": "GenLayer Judgment Hackathon (hackathon)"
+    }
+  },
+  "finished_at": "2026-09-21T19:10:55Z",
+  "live_scale": 10,
+  "network": "studionet",
+  "outcomes": {
+    "AD01": {
+      "applicant_mark": true,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "CODE",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000007",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [
+        "E1"
+      ],
+      "observed": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "ca7587e1d5491d0ed3e19e8f07acd4c68d0b52e257bea42604f4934f10235eac",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000007",
+      "tx": "0x821b0718f7fffa5e386c1f857feedbf51d7c4cfe5f592f3b9fa3e3044af99fef"
+    },
+    "AD02": {
+      "applicant_mark": true,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "CODE",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000008",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [
+        "E3"
+      ],
+      "observed": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "559e5923b6466b4b2de02b980cf75ca5c58779f9e0d5b446dee9d9eff69f960d",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000008",
+      "tx": "0xe29648cbac7a1b9c0f07b607c26942b0d57782bf8f267ee9a85b190a38c215a1"
+    },
+    "AD03": {
+      "applicant_mark": true,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "CODE",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000011",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [
+        "E3"
+      ],
+      "observed": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "7ffd4239a098162a0c1eb4557fceca5de621d11e89055ab874f49af524c3bd33",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000011",
+      "tx": "0xa678bdb62e3f375724afa7f60dfa4dc509ecfd6d8b1353c5125a649e86d00d30"
+    },
+    "AD04": {
+      "applicant_mark": true,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "CODE",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000015",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [
+        "E3"
+      ],
+      "observed": [
+        "FAIL",
+        "MANIPULATION",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "9791eaf7d435b4337ed8691fc0f5ad112985cf249fcc9d1067ed9a94f37d3759",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000015",
+      "tx": "0xf0abd9d07b925ac2a74df95333b7e53a3bad93c5989af38253f564df042cec9a"
+    },
+    "AD05": {
+      "applicant_mark": true,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "CODE",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000009",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "INSUFFICIENT",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "HIDDEN_TEXT",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [
+        "E1"
+      ],
+      "markers": [],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "HIDDEN_TEXT",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "4507f852b4459fc03b485f4a095a95cbbb9f9ba574081a6087cc30492ae3186b",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000009",
+      "tx": "0xca5a696004725a9132c6cf95c582e62d5e10271f0cda1c4f7f918e9df653929f"
+    },
+    "AD06": {
+      "applicant_mark": false,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "CODE",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000010",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "INSUFFICIENT",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "APPLICANT_MARK_MISSING",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "APPLICANT_MARK_MISSING",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "6743c33265678ac272c4be27d9806ec5a79da34b418d2e06fe7a7c9db607f01b",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000010",
+      "tx": "0xb2ce3bd89f4be90423e8651b8179bc309998d60a139d53f2591cceb99a627e9c"
+    },
+    "AD07": {
+      "applicant_mark": false,
+      "criterion_result_hash": "a1d367f9f6f02e1f7e5c3941def701fbf8532080a4d5f50f983fc12aa3227409",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "RELEVANCE",
+          "UNVERIFIABLE",
+          "CODE"
+        ],
+        [
+          "ORIGINALITY",
+          "INCONCLUSIVE",
+          "CODE"
+        ],
+        [
+          "genlayer_fit",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "implementation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "documentation",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "CODE"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "CODE",
+      "duplicate_items": [
+        "E1"
+      ],
+      "evaluation_id": "EV-000012",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "DUPLICATE_EVIDENCE",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "DUPLICATE_EVIDENCE",
+        "NONE"
+      ],
+      "originality_band": "INCONCLUSIVE",
+      "overall_score": 0,
+      "record_digest": "3ef90a13f79dd6fe5eb9007c2c9e909ab2440d54386b6b1a5ba8eeae8bf40ae8",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000012",
+      "tx": "0x71b34e623c5311a2bc090d8c8c26ecf4d2b72f6dfb67a054c8d39c814edfa059"
+    },
+    "AD08": {
+      "applicant_mark": true,
+      "criterion_result_hash": "8ac2b5948c301e161cca89e7a08f2e15333265155fa6d56841889b8e94472a0f",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "CONTRADICTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000013",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "CLAIM_CONTRADICTED",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "CLAIM_CONTRADICTED",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 25,
+      "record_digest": "e46948770175be8df0bccd4368df30c6e68a150c1a4836c1ab7e17895759daa2",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000013",
+      "tx": "0xe47e6540b30bb8788751b83a295465047c1a4a74286506f03a1389a0b98c5544"
+    },
+    "AD09": {
+      "applicant_mark": true,
+      "criterion_result_hash": "85249d9c6c82ea6d304cb9c52811a776236de14b88418f318b9f626bb197359b",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "PARTIALLY_RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000014",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 25,
+      "record_digest": "0e6c348c50591a8018f8dc6a1167de86480cf66aa648655c85b4ca1784015b7d",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000014",
+      "tx": "0x3bdc046a239dfb610b20ad148ac2a5fd6ec9444c7aad9399e63392fed62026ad"
+    },
+    "CT01": {
+      "applicant_mark": true,
+      "criterion_result_hash": "f7880790188fe02552197def07ac59e452f2df2d14842605cdb658a04b767017",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "SUPPORTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000018",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "INSUFFICIENT",
+      "expected": [
+        "PASS",
+        "MEETS_POLICY",
+        "FULL"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-minimax",
+          "stdout": "",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-mistral",
+          "stdout": "[DISAGREE] consequence: evidence_sufficiency mine='SUFFICIENT' theirs='INSUFFICIENT'\n[MINE] PASS MEETS_POLICY ELIGIBILITY=ELIGIBLE RELEVANCE=RELEVANT ORIGINALITY=ORIGINAL technical_accuracy=MET usefulness=MET completeness=MET K1=SUPPORTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-sonnet",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "ELIGIBILITY_UNVERIFIABLE",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 100,
+      "record_digest": "4f68a551c0400e2c2384bc8eac93b85017b1efcbfa34c4e6088966f801c43314",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000018",
+      "tx": "0xde2e7cbf2b4b4d58642f8c8296712efcb08bd188bdf104438f3e1ac553f8b622"
+    },
+    "CT02": {
+      "applicant_mark": true,
+      "criterion_result_hash": "b805575a5a78a01b710cb7f7d774ed33d3c004b84505c0338454c3446977ff45",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "SIMILAR",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "PARTIALLY_MET",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000019",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "INSUFFICIENT",
+      "expected": [
+        "FAIL",
+        "SIMILAR_TO_SOURCE",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-minimax",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "google/gemini-3-flash-preview",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-sonnet",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'technical_accuracy': 'PARTIALLY_MET'} theirs={'technical_accuracy': 'MET'}\n[MINE] INSUFFICIENT_EVIDENCE ELIGIBILITY_UNVERIFIABLE ELIGIBILITY=UNVERIFIABLE RELEVANCE=RELEVANT ORIGINALITY=SIMILAR technical_accuracy=PARTIALLY_MET usefulness=NOT_MET completeness=NOT_MET\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-grok",
+          "stdout": "[DOWNGRADE] ELIGIBILITY ELIGIBLE: support rule not met; raw []\n",
+          "vote": "agree"
+        }
+      ],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "ELIGIBILITY_UNVERIFIABLE",
+        "NONE"
+      ],
+      "originality_band": "SIMILAR",
+      "overall_score": 70,
+      "record_digest": "2e4619fe671df68ac99ce7ca4ad882ac0670b6dd9de96e9a2df7f55b22ad4d8e",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000019",
+      "tx": "0x79b0ac0ee437ceccd5fad8bafd8b33e964274be6e5be108b8527733ab66df0b9"
+    },
+    "CT03": {
+      "applicant_mark": true,
+      "criterion_result_hash": "92f6381318ba37e559492133fa08efa569c6e7f05d68f0158f7ac124cb8a7c1f",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "UNVERIFIABLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "IRRELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "NOT_MET",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000020",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "INSUFFICIENT",
+      "expected": [
+        "FAIL",
+        "OFF_TOPIC",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "anthropic/claude-sonnet-4.6",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        }
+      ],
+      "observed": [
+        "INSUFFICIENT_EVIDENCE",
+        "ELIGIBILITY_UNVERIFIABLE",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 0,
+      "record_digest": "aaec2ce807a817877533d8f0006e08f616522106a7d14dd0dbb1e22b9208acd2",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000020",
+      "tx": "0x91e467d60d27cb802ac9d26dd2406ae5d27e939bfdd4bd4ae453738937e57a0e"
+    },
+    "CT04": {
+      "applicant_mark": true,
+      "criterion_result_hash": "1da7a2b455ac27f9290329986982ef891bcaf65af008772c58b2608a0e4a0b05",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "INELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "IRRELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "technical_accuracy",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ],
+        [
+          "usefulness",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "completeness",
+          "NOT_MET",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000021",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "INELIGIBLE",
+        "INELIGIBLE_APPLICANT",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "INELIGIBLE",
+        "INELIGIBLE_APPLICANT",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 0,
+      "record_digest": "a9d23e1e7643bfe5b8047f9d4de308fabfb340cc47a0aaac33afa233c681a072",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000021",
+      "tx": "0xe4cd32a83f78bc5b94138a937fb78babb9e25d6c59c26f67f0952ff8c37ff14b"
+    },
+    "GM01": {
+      "applicant_mark": true,
+      "criterion_result_hash": "89fa41ddd8061121db7c438316ab5f42dfad19cc51a075271f69b227b9b95db8",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "milestone_delivered",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "evidence_quality",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "SUPPORTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000016",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "PASS",
+        "MEETS_POLICY",
+        "M1"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "PASS",
+        "MEETS_POLICY",
+        "M1"
+      ],
+      "originality_band": "NOT_ASSESSED",
+      "overall_score": 100,
+      "record_digest": "f355443f64adad0454b62f3a32ce669bae1f501bc15edde902e8aa549e4c52e9",
+      "reward_atto": "5000000000000000",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000016",
+      "tx": "0x1eac0a0663d8192fa8cfdb6011808de611ed58b00c168c3530e4569af56072c1"
+    },
+    "GM03": {
+      "applicant_mark": true,
+      "criterion_result_hash": "bb52097db403b6a66e9e381d6cc8ba81c3c74c4495a0cc0dbf21c9765f803425",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "milestone_delivered",
+          "EVIDENCE_CONFLICTING",
+          "PANEL"
+        ],
+        [
+          "evidence_quality",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "CONTRADICTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000017",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "CLAIM_CONTRADICTED",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "CLAIM_CONTRADICTED",
+        "NONE"
+      ],
+      "originality_band": "NOT_ASSESSED",
+      "overall_score": 0,
+      "record_digest": "e6e6507abfd2dc4e04880400702fa6501a49ebbc6daeb4dee17c1876b0a02a40",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000017",
+      "tx": "0x20de0715542be7ee26bb2736c9adecdbffc3882183de33c521ba45accc37f4e8"
+    },
+    "HK01": {
+      "applicant_mark": true,
+      "criterion_result_hash": "1b5b716abce34bff7520a1e20c4970e6471881c44720680a65b09b7bcbe95117",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "SUPPORTED",
+          "PANEL"
+        ],
+        [
+          "K2",
+          "SUPPORTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000001",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "PASS",
+        "MEETS_POLICY",
+        "TIER_A"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "PASS",
+        "MEETS_POLICY",
+        "TIER_A"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 100,
+      "record_digest": "1c5b78ebbb9f9321efe6bed6c7471582c6f255cd96f6c0729e7361ab4d43572e",
+      "reward_atto": "6000000000000000",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ],
+        [
+          "E5",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000001",
+      "tx": "0xbbc19c2bbfc0cb7a888d3396d579fe7e42f12fa8130c929b30aac9e01cd95757"
+    },
+    "HK02": {
+      "applicant_mark": true,
+      "criterion_result_hash": "ad775a0bb20e73f5e680265d938b2e4b645e0f5dac8cfe0abadebbb0a308c11f",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "PARTIALLY_RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000002",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 40,
+      "record_digest": "b32f800f2c6b972e79ba9e6b06901e14a32272291e9ca64bf304bae448d3f77d",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000002",
+      "tx": "0x775626eaf44604f495bd3dc521dbca55ce51f94348d4946db614e23e4f9ab522"
+    },
+    "HK03": {
+      "applicant_mark": true,
+      "criterion_result_hash": "f9101d750861cebd39c18550b4b036b18634621480deda7895346a2e8e390ffd",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "SUPPORTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000003",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "PASS",
+        "MEETS_POLICY",
+        "TIER_C"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "PASS",
+        "MEETS_POLICY",
+        "TIER_C"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 60,
+      "record_digest": "c88f06975ed0dc4346e02b3a2d15d2269109945cb05099619b7e5dfefeb71f1f",
+      "reward_atto": "2000000000000000",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000003",
+      "tx": "0xd2e7fb35fb7e18a7425a52e358ac81de44d9976135166b64e92df54105e7fb50"
+    },
+    "HK04": {
+      "applicant_mark": true,
+      "criterion_result_hash": "7e71960d7b88e914d06bac70ca8fbe496d2ef0a4a67fdb87755a8026f97a28df",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "K1",
+          "CONTRADICTED",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": true,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000004",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "FAIL",
+        "CLAIM_CONTRADICTED",
+        "NONE"
+      ],
+      "held": true,
+      "hidden": [],
+      "markers": [],
+      "observed": [
+        "FAIL",
+        "CLAIM_CONTRADICTED",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 80,
+      "record_digest": "54f5619ae72d92ee5355cbd51366d14b9dff00738a1214412434fdb7bfd6edb1",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000004",
+      "tx": "0xb2dd1848e8d9c0e0a3dc6186cb92db56508c8250e6585ffa48f98a133e51dadd"
+    },
+    "HK05": {
+      "applicant_mark": true,
+      "criterion_result_hash": "8c59dd2d857a8109a78559518c0f45e0f693d3dfa2408e8f295c7084b2068fb7",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000005",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3",
+          "E4"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "CONFLICTING_EVIDENCE",
+        "REQUIRED_CRITERION_CONFLICTING",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-deepseek",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "anthropic/claude-sonnet-4.6",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: evidence_sufficiency mine='CONFLICTING' theirs='SUFFICIENT'\n[MINE] CONFLICTING_EVIDENCE REQUIRED_CRITERION_CONFLICTING ELIGIBILITY=ELIGIBLE RELEVANCE=RELEVANT ORIGINALITY=ORIGINAL genlayer_fit=MET implementation=EVIDENCE_CONFLICTING documentation=PARTIALLY_MET deployment=NOT_MET\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        }
+      ],
+      "observed": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 55,
+      "record_digest": "829a5501a6d9cd8eb2cc73c5ff27804cdf44c83df73f91860ff16b6ba1d183da",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ],
+        [
+          "E4",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000005",
+      "tx": "0xff8cec601023575163b072bc9c3382f1e2273488f7da429d4eced9dfd5bfb222"
+    },
+    "HK06": {
+      "applicant_mark": true,
+      "criterion_result_hash": "83ef037fd273c7e9953a0d7a0bbe7288594108f2130142288144f0859e1a08c4",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "NOT_MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000006",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "REQUIRED_CRITERION_INSUFFICIENT",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-mistral",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-deepseek",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-sonnet",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'genlayer_fit': 'MET', 'implementation': 'NOT_MET'} theirs={'genlayer_fit': 'PARTIALLY_MET', 'implementation': 'NOT_MET'}\n[MINE] FAIL REQUIRED_CRITERION_NOT_MET ELIGIBILITY=ELIGIBLE RELEVANCE=RELEVANT ORIGINALITY=ORIGINAL genlayer_fit=MET implementation=NOT_MET documentation=PARTIALLY_MET deployment=EVIDENCE_INSUFFICIENT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-qwen",
+          "stdout": "[DISAGREE] consequence: originality_band mine='INCONCLUSIVE' theirs='ORIGINAL'\n[MINE] INCONCLUSIVE ORIGINALITY_INCONCLUSIVE ELIGIBILITY=ELIGIBLE RELEVANCE=RELEVANT ORIGINALITY=INCONCLUSIVE genlayer_fit=EVIDENCE_INSUFFICIENT implementation=PARTIALLY_MET documentation=MET deployment=EVIDENCE_INSUFFICIENT\n",
+          "vote": "disagree"
+        }
+      ],
+      "observed": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 25,
+      "record_digest": "1a6ebe56505c324234ffc28ce4fbb35381113c414719c49ed62452c357246d66",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000006",
+      "tx": "0x454eb938ca691125bd9c78760b87e6dd20ec4aa4c72e4ab175847c41301643fc"
+    }
+  },
+  "pending": {},
+  "phase": "cases",
+  "programs": {
+    "adv-1": "GP-000002",
+    "adv-2": "GP-000003",
+    "adv-3": "GP-000004",
+    "contribution": "GP-000007",
+    "grant": "GP-000005",
+    "grant-b": "GP-000006",
+    "hackathon": "GP-000001"
+  },
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/Grantcourt/9ccfb239d86d3bbebfe0cc10a855595b4e86b814/fixtures/",
+  "rejected_rounds": [
+    {
+      "accepted": false,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-gemma",
+          "stdout": "",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'genlayer_fit': 'MET', 'implementation': 'PARTIALLY_MET'} theirs={'genlayer_fit': 'MET', 'implementation': 'NOT_MET'}\n[MINE] FAIL CLAIM_CONTRADICTED ELIGIBILITY=ELIGIBLE RELEVANCE=RELEVANT ORIGINALITY=ORIGINAL genlayer_fit=MET implementation=PARTIALLY_MET documentation=PARTIALLY_MET deployment=NOT_MET K1=CONTRADICTED\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "anthropic/claude-sonnet-4.6",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'genlayer_fit': 'PARTIALLY_MET', 'implementation': 'NOT_MET'} theirs={'genlayer_fit': 'MET', 'implementation': 'NOT_MET'}\n[MINE] FAIL CLAIM_CONTRADICTED ELIGIBILITY=ELIGIBLE RELEVANCE=RELEVANT ORIGINALITY=ORIGINAL genlayer_fit=PARTIALLY_MET implementation=NOT_MET documentation=PARTIALLY_MET deployment=NOT_MET K1=CONTRADICTED\n",
+          "vote": "disagree"
+        }
+      ],
+      "returned": "{'readable': '\"EV-000013\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD08",
+      "tx": "0x89f4b685255d165712aa9b36260a47a0f804d02da379e150f208e6703d20448c",
+      "votes": [
+        "DISAGREE",
+        "DISAGREE",
+        "IDLE",
+        "IDLE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "accepted": false,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-sonnet",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-glm",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'genlayer_fit': 'NOT_MET', 'implementation': 'MET'} theirs={'genlayer_fit': 'NOT_MET', 'implementation': 'PARTIALLY_MET'}\n[MINE] FAIL OFF_TOPIC ELIGIBILITY=ELIGIBLE RELEVANCE=IRRELEVANT ORIGINALITY=ORIGINAL genlayer_fit=NOT_MET implementation=MET documentation=NOT_MET deployment=EVIDENCE_INSUFFICIENT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-qwen",
+          "stdout": "[DISAGREE] consequence: reason_code mine='REQUIRED_CRITERION_NOT_MET' theirs='OFF_TOPIC'\n[MINE] FAIL REQUIRED_CRITERION_NOT_MET ELIGIBILITY=ELIGIBLE RELEVANCE=PARTIALLY_RELEVANT ORIGINALITY=ORIGINAL genlayer_fit=NOT_MET implementation=PARTIALLY_MET documentation=PARTIALLY_MET deployment=EVIDENCE_INSUFFICIENT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: reason_code mine='REQUIRED_CRITERION_NOT_MET' theirs='OFF_TOPIC'\n[MINE] FAIL REQUIRED_CRITERION_NOT_MET ELIGIBILITY=ELIGIBLE RELEVANCE=PARTIALLY_RELEVANT ORIGINALITY=ORIGINAL genlayer_fit=NOT_MET implementation=MET documentation=PARTIALLY_MET deployment=EVIDENCE_INSUFFICIENT\n",
+          "vote": "disagree"
+        }
+      ],
+      "returned": "{'readable': '\"EV-000014\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD09",
+      "tx": "0xcd4c527f896a5d9c717a4fa72939670b953847254f84c235ddb873216544c8ce",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "DISAGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    {
+      "accepted": false,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "policy:prd-deepseek",
+          "stdout": "",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-grok",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'technical_accuracy': 'EVIDENCE_INSUFFICIENT'} theirs={'technical_accuracy': 'NOT_MET'}\n[MINE] INSUFFICIENT_EVIDENCE ELIGIBILITY_UNVERIFIABLE ELIGIBILITY=UNVERIFIABLE RELEVANCE=IRRELEVANT ORIGINALITY=ORIGINAL technical_accuracy=EVIDENCE_INSUFFICIENT usefulness=EVIDENCE_INSUFFICIENT completeness=EVIDENCE_INSUFFICIENT\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gemini",
+          "stdout": "[DISAGREE] consequence: required_criteria mine={'technical_accuracy': 'EVIDENCE_INSUFFICIENT'} theirs={'technical_accuracy': 'NOT_MET'}\n[MINE] INSUFFICIENT_EVIDENCE ELIGIBILITY_UNVERIFIABLE ELIGIBILITY=UNVERIFIABLE RELEVANCE=IRRELEVANT ORIGINALITY=ORIGINAL technical_accuracy=EVIDENCE_INSUFFICIENT usefulness=NOT_MET completeness=NOT_MET\n",
+          "vote": "disagree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        }
+      ],
+      "returned": "{'readable': '\"EV-000020\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT03",
+      "tx": "0xe39403a3e9cab80529348b3027b17410e8ee5ce7ba7d1afc0e4482e4a1848db2",
+      "votes": [
+        "DISAGREE",
+        "AGREE",
+        "DISAGREE",
+        "DISAGREE",
+        "IDLE"
+      ]
+    }
+  ],
+  "started_at": "2026-09-21T17:58:18Z",
+  "steps": {
+    "activate:adv-1": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:adv-1",
+      "tx": "0x30ce47f9d9186dedb7129acb682c96fa6d7fab3716459bef604cbfdd339bc8a8",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "activate:adv-2": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:adv-2",
+      "tx": "0x8abec06e9a86a239e70ff31b9c79fd385ffb812585941c07962624891124acc2",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "activate:adv-3": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:adv-3",
+      "tx": "0x8f43679e610a8112b4ec7a84ba959befdbd3eeba912be225d2ae2407a4dbf7ad",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "activate:contribution": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:contribution",
+      "tx": "0x0361e6e0b7b408439066e1121c1b3cd605fa761026f372ab9fffc77a08e2117d",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "activate:grant": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:grant",
+      "tx": "0x83f10d8be6be4e0ca3036c44601c7424037fbf0aec02d75efebc934903ee9430",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "activate:grant-b": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:grant-b",
+      "tx": "0x4be48d1e822bfc542385d7efd8b8867dc78039491c785c71a12c4a854245cc51",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "activate:hackathon": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:hackathon",
+      "tx": "0x54a54323a2976d51aab0b008ad5ac594aef4654765283efdb984863b379bbbb4",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:adv-1": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000002\"'}",
+      "status": "FINALIZED",
+      "step": "create:adv-1",
+      "tx": "0x1a7aca42c1a26cef95f32cef532b389950022725ed5c1f46f536ff636780a415",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "create:adv-2": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000003\"'}",
+      "status": "FINALIZED",
+      "step": "create:adv-2",
+      "tx": "0x56ee163e01a9268a92af91695c21c3cd018d1ffeb31c25cf1c4cf1ac72b48ac2",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:adv-3": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000004\"'}",
+      "status": "FINALIZED",
+      "step": "create:adv-3",
+      "tx": "0xd0452a228306bb7e3c132a8a2d7653581a0c40c67951e31c5f334a733ba49599",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "create:contribution": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000007\"'}",
+      "status": "FINALIZED",
+      "step": "create:contribution",
+      "tx": "0x0e234f540eb8b5da7cd56528337d3824bf0ffd60fef12ec6533f3550dce92d37",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "create:grant": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000005\"'}",
+      "status": "FINALIZED",
+      "step": "create:grant",
+      "tx": "0xb231e768251e389c6259602af0aedbb4f6f12d3e3a971c42ec58d75a15cc848d",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "create:grant-b": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000006\"'}",
+      "status": "FINALIZED",
+      "step": "create:grant-b",
+      "tx": "0xb35f760167d215f13ff9b9982c6750c68673e21f1997955bd10701d5b2486232",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "create:hackathon": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000001\"'}",
+      "status": "FINALIZED",
+      "step": "create:hackathon",
+      "tx": "0xd3889a39a0923e8717fe9eeedc449521d2548c49427e6057f75c8fc5f5f611d6",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:AD01": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000007\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD01",
+      "tx": "0x821b0718f7fffa5e386c1f857feedbf51d7c4cfe5f592f3b9fa3e3044af99fef",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:AD02": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000008\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD02",
+      "tx": "0xe29648cbac7a1b9c0f07b607c26942b0d57782bf8f267ee9a85b190a38c215a1",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:AD03": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000011\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD03",
+      "tx": "0xa678bdb62e3f375724afa7f60dfa4dc509ecfd6d8b1353c5125a649e86d00d30",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:AD04": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000015\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD04",
+      "tx": "0xf0abd9d07b925ac2a74df95333b7e53a3bad93c5989af38253f564df042cec9a",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:AD05": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000009\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD05",
+      "tx": "0xca5a696004725a9132c6cf95c582e62d5e10271f0cda1c4f7f918e9df653929f",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "evaluate:AD06": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000010\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD06",
+      "tx": "0xb2ce3bd89f4be90423e8651b8179bc309998d60a139d53f2591cceb99a627e9c",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:AD07": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000012\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD07",
+      "tx": "0x71b34e623c5311a2bc090d8c8c26ecf4d2b72f6dfb67a054c8d39c814edfa059",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:AD08": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000013\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD08",
+      "tx": "0xe47e6540b30bb8788751b83a295465047c1a4a74286506f03a1389a0b98c5544",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    "evaluate:AD09": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000014\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:AD09",
+      "tx": "0x3bdc046a239dfb610b20ad148ac2a5fd6ec9444c7aad9399e63392fed62026ad",
+      "votes": [
+        "DISAGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CT01": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000018\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT01",
+      "tx": "0xde2e7cbf2b4b4d58642f8c8296712efcb08bd188bdf104438f3e1ac553f8b622",
+      "votes": [
+        "DISAGREE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CT02": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000019\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT02",
+      "tx": "0x79b0ac0ee437ceccd5fad8bafd8b33e964274be6e5be108b8527733ab66df0b9",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "DISAGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:CT03": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000020\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT03",
+      "tx": "0x91e467d60d27cb802ac9d26dd2406ae5d27e939bfdd4bd4ae453738937e57a0e",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:CT04": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000021\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:CT04",
+      "tx": "0xe4cd32a83f78bc5b94138a937fb78babb9e25d6c59c26f67f0952ff8c37ff14b",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:GM01": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000016\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:GM01",
+      "tx": "0x1eac0a0663d8192fa8cfdb6011808de611ed58b00c168c3530e4569af56072c1",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "evaluate:GM03": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000017\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:GM03",
+      "tx": "0x20de0715542be7ee26bb2736c9adecdbffc3882183de33c521ba45accc37f4e8",
+      "votes": [
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:HK01": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000001\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK01",
+      "tx": "0xbbc19c2bbfc0cb7a888d3396d579fe7e42f12fa8130c929b30aac9e01cd95757",
+      "votes": [
+        "IDLE",
+        "DISAGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:HK02": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000002\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK02",
+      "tx": "0x775626eaf44604f495bd3dc521dbca55ce51f94348d4946db614e23e4f9ab522",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "DISAGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:HK03": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000003\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK03",
+      "tx": "0xd2e7fb35fb7e18a7425a52e358ac81de44d9976135166b64e92df54105e7fb50",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:HK04": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000004\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK04",
+      "tx": "0xb2dd1848e8d9c0e0a3dc6186cb92db56508c8250e6585ffa48f98a133e51dadd",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    "evaluate:HK05": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000005\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK05",
+      "tx": "0xff8cec601023575163b072bc9c3382f1e2273488f7da429d4eced9dfd5bfb222",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "IDLE"
+      ]
+    },
+    "evaluate:HK06": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000006\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK06",
+      "tx": "0x454eb938ca691125bd9c78760b87e6dd20ec4aa4c72e4ab175847c41301643fc",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "DISAGREE",
+        "DISAGREE"
+      ]
+    },
+    "fund:adv-1:24000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"24000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:adv-1:24000000000000000",
+      "tx": "0x2d64d77d219abd20ee8882835f6ea5410922be8a25faf115813703bc1124a0b1",
+      "value_atto": "24000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "fund:adv-2:24000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"24000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:adv-2:24000000000000000",
+      "tx": "0x6a1c055eae8dce5e723b711648d19f49a83203bdc7ac5b2855fd4c5ed57cc774",
+      "value_atto": "24000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "fund:adv-3:6000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"6000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:adv-3:6000000000000000",
+      "tx": "0x31d55cc7e50ecf163193ce022e0d56b20a498c1b2ffd7d771d43df1f37faaba9",
+      "value_atto": "6000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "fund:contribution:10000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"10000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:contribution:10000000000000000",
+      "tx": "0xbf56fa700cf7bb8b051b276ae93a033cbc565715ed19958bb11257114da4dfeb",
+      "value_atto": "10000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "fund:grant-b:5000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"5000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:grant-b:5000000000000000",
+      "tx": "0xf96af176fe0771965a8a7507dcd092708e2d7866c4c688389ea7065bfb6405c9",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "fund:grant:5000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"5000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:grant:5000000000000000",
+      "tx": "0xf187e279c35c80a437ad6847da1e78eb29b2171c0532687c9a3ba43b2f188a16",
+      "value_atto": "5000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "fund:hackathon:36000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"36000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:hackathon:36000000000000000",
+      "tx": "0x7c7ed178b4deee2596c1a53d0fd5631d4f7f763fe50b114d48a7d570f84ef436",
+      "value_atto": "36000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:AD01": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000007\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD01",
+      "tx": "0x861a52faefd89543d9a14267f967902cd12cd96b2995c168d3716390bf093afb",
+      "value_atto": "500000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:AD02": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000008\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD02",
+      "tx": "0xc1a4086e5c23bbad374345dbcc438c4469c7cf359ec85e8b7c42409943a46713",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:AD03": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000011\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD03",
+      "tx": "0x58d6907eed2682cf3f1f6f9e4806abebe55dc4327ef1d9f76631f9a5f213d491",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "submit:AD04": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000015\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD04",
+      "tx": "0xb00df4e97cfa9b41d70040b16f6c8eb94ff87b59c5d0cd8b61f63786c35c2dc8",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:AD05": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000009\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD05",
+      "tx": "0xb2c8c26b7195de0317493f465b86ed3b5dd5f805641408a44bd473c1afcea743",
+      "value_atto": "500000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:AD06": {
+      "accepted": true,
+      "actor": "erin",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000010\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD06",
+      "tx": "0x3d7916f531d87f3bd660a758c3a719e39a9130c931daa84a596a02f793b890a2",
+      "value_atto": "500000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:AD07": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000012\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD07",
+      "tx": "0xa2bdba23e3be32d9140cf3d9fd210fb4c468f40354e1dd75fa4c94d9a7a2df30",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:AD08": {
+      "accepted": true,
+      "actor": "erin",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000013\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD08",
+      "tx": "0xf4bbfe00bb13e8faae7e93822f3cabb2c0e4df044716a4293b399acc5c185542",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:AD09": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000014\"'}",
+      "status": "FINALIZED",
+      "step": "submit:AD09",
+      "tx": "0x10b1e34365a8d0067158d4ddba6f458482d1ace1d81fb5dc8e27d3fbfcc1e894",
+      "value_atto": "500000000000000",
+      "votes": [
+        "IDLE",
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CT01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000018\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT01",
+      "tx": "0x6d03596e396090c1ee2633e7fe01373a1a006621e6ebbb41a08f271b92057c0c",
+      "value_atto": "200000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:CT02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000019\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT02",
+      "tx": "0xd763fc468362c5f310da5bda8d591cec6043b5330b1946bb12b78c3b9df04718",
+      "value_atto": "200000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:CT03": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000020\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT03",
+      "tx": "0x832ae163411a508e87d41e66a2d1f898b8071a52a03f461bf1884087c23c347d",
+      "value_atto": "200000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:CT04": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000021\"'}",
+      "status": "FINALIZED",
+      "step": "submit:CT04",
+      "tx": "0x833629bc694db6b23bc7b4952a144083f775b47f83debe82dd8494c66dbfcec2",
+      "value_atto": "200000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:GM01": {
+      "accepted": true,
+      "actor": "erin",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000016\"'}",
+      "status": "FINALIZED",
+      "step": "submit:GM01",
+      "tx": "0xb6d86a1c6024317e1285e6978245db5300ad101f25e986c9e1b5b6371f497d1c",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE"
+      ]
+    },
+    "submit:GM03": {
+      "accepted": true,
+      "actor": "erin",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000017\"'}",
+      "status": "FINALIZED",
+      "step": "submit:GM03",
+      "tx": "0x260edacc3955087ab0bc82a9377324800ef02d5ea3461ff0d91a929d509bd81e",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:HK01": {
+      "accepted": true,
+      "actor": "alice",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000001\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK01",
+      "tx": "0x9e7d887e9ce52b1468fb4bdf615746c6beee098e91e5ae3ab337f356c99691ef",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:HK02": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000002\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK02",
+      "tx": "0x0d8e377ae973a0ee1d93b3180a93d6c126ea58600dd4a184dc2b7379d443b2ff",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:HK03": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000003\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK03",
+      "tx": "0xe453eb24c13bb02f672e773b53f37e042c9a2786fbdb2589c3132feca42e8a34",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:HK04": {
+      "accepted": true,
+      "actor": "dave",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000004\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK04",
+      "tx": "0x7f9ce1e5d4c61dcc74e9679d35841c0041acd030c12620d0e7a8d3e368254f2e",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "submit:HK05": {
+      "accepted": true,
+      "actor": "bob",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000005\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK05",
+      "tx": "0x111503813dab7f693ecbcfe572f31467061230dbcf86de1f1039838e2fa1094b",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "submit:HK06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000006\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK06",
+      "tx": "0xd57c1194099d313e953c5245d44e33456f136d5846c80da3f66bdc4f32e19b82",
+      "value_atto": "500000000000000",
+      "votes": [
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    }
+  },
+  "submissions": {
+    "AD01": "GS-000007",
+    "AD02": "GS-000008",
+    "AD03": "GS-000011",
+    "AD04": "GS-000015",
+    "AD05": "GS-000009",
+    "AD06": "GS-000010",
+    "AD07": "GS-000012",
+    "AD08": "GS-000013",
+    "AD09": "GS-000014",
+    "CT01": "GS-000018",
+    "CT02": "GS-000019",
+    "CT03": "GS-000020",
+    "CT04": "GS-000021",
+    "GM01": "GS-000016",
+    "GM03": "GS-000017",
+    "HK01": "GS-000001",
+    "HK02": "GS-000002",
+    "HK03": "GS-000003",
+    "HK04": "GS-000004",
+    "HK05": "GS-000005",
+    "HK06": "GS-000006"
+  },
+  "summary": {
+    "held": [
+      "AD01",
+      "AD02",
+      "AD03",
+      "AD04",
+      "AD05",
+      "AD06",
+      "AD07",
+      "AD08",
+      "AD09",
+      "CT04",
+      "GM01",
+      "GM03",
+      "HK01",
+      "HK02",
+      "HK03",
+      "HK04"
+    ],
+    "not_held": [
+      "CT01",
+      "CT02",
+      "CT03",
+      "HK05",
+      "HK06"
+    ]
+  }
+}

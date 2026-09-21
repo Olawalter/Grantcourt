@@ -273,10 +273,16 @@ or sources the program fixed (role REFERENCE). The subjects:
 
 ELIGIBILITY - does the evidence show the applicant meets
 DATA.program.eligibility_policy?
-  ELIGIBLE: the applicant's evidence shows it; quote it.
-  INELIGIBLE: the evidence shows a condition of the policy is not met; quote
-  what shows it.
-  UNVERIFIABLE: the evidence cannot show either way.
+  ELIGIBLE: the applicant's evidence shows every condition the policy
+  requires it to show, and nothing in it shows an exclusion applies. A policy
+  that only excludes some applicants (for example "staff are not eligible")
+  requires nothing to be shown: when nothing shows the exclusion applies, the
+  applicant is ELIGIBLE - quote the passage that identifies the applicant or
+  the work, such as its author line.
+  INELIGIBLE: the evidence shows a condition of the policy is not met or an
+  exclusion applies; quote what shows it.
+  UNVERIFIABLE: the policy requires the evidence to show something, and the
+  evidence does not show it either way.
 
 RELEVANCE - is the work about what the program asks for (DATA.program, and
 DATA.milestone when present)? This asks what the work is about, not how well.
@@ -295,11 +301,14 @@ ORIGINALITY - compare the applicant's evidence with the REFERENCE items.
 Each criterion (its id, e.g. genlayer_fit) - does the evidence satisfy it?
   MET: the applicant's evidence fully satisfies it; quote it.
   PARTIALLY_MET: in part; quote it.
-  NOT_MET: the evidence shows the work does not satisfy it.
-  EVIDENCE_INSUFFICIENT: the evidence exists but does not establish it either
+  NOT_MET: the evidence shows the work does not satisfy it - for example it
+  is a stub, or it states the work is missing.
+  EVIDENCE_INSUFFICIENT: the evidence exists but does not bear on it either
   way, or is irrelevant to it.
-  EVIDENCE_CONFLICTING: two items materially contradict each other on this
-  criterion; quote both.
+  EVIDENCE_CONFLICTING: two of the applicant's items state opposite facts
+  about this criterion - for example one says every test passes and another
+  shows failing tests. Answer EVIDENCE_CONFLICTING, not PARTIALLY_MET or
+  NOT_MET: the contradiction is the finding. Quote both items.
 
 Each claim (K1, K2, ...) - the applicant's own statement, tested against the
 evidence.

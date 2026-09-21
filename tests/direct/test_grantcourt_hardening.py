@@ -683,7 +683,7 @@ def test_an_applicant_cannot_take_down_its_evidence_and_appeal(court, direct_vm)
     evaluate(court, direct_vm, sid, answer_for("HK06"))
     with direct_vm.expect_revert("which this round could not read again"):
         appeal_case(court, direct_vm, sid, "HK06",
-                    skip=("sources/hackathon/carol/lexicon.py",))
+                    skip=("sources/hackathon/carol/lexicon_config.py",))
 
 
 def test_an_appeal_that_overturns_a_pass_releases_the_evidence(court, direct_vm):
@@ -840,3 +840,37 @@ def test_a_criterion_naming_no_categories_still_needs_an_applicant_quote(court, 
     record = evaluate(court, direct_vm, sid, answer)
     assert finding(record, "evidence_quality")["state"] == "EVIDENCE_INSUFFICIENT"
     assert record["overall_score"] == 60
+
+
+def _similar(quote_e1: str, quote_e2: str) -> dict:
+    answer = answer_for("CT02")
+    answer["subjects"]["ORIGINALITY"]["quotes"] = [{"evidence_id": "E1", "text": quote_e1},
+                                                   {"evidence_id": "E2", "text": quote_e2}]
+    return answer
+
+
+def test_a_similarity_of_exactly_twelve_shared_words_stands(court, direct_vm):
+    twelve = "A comparative rule lets each validator compute its own result and compare"
+    program_id = open_program(court, direct_vm, "contribution")
+    sid = submit(court, direct_vm, program_id, "CT02")
+    record = evaluate(court, direct_vm, sid, _similar(twelve, twelve))
+    assert (record["status"], record["reason_code"]) == ("FAIL", "SIMILAR_TO_SOURCE")
+
+
+def test_quotes_sharing_a_few_words_are_not_a_similarity(court, direct_vm):
+    program_id = open_program(court, direct_vm, "contribution")
+    sid = submit(court, direct_vm, program_id, "CT02")
+    record = evaluate(court, direct_vm, sid, _similar(
+        "Here is how agreement works on GenLayer",
+        "Validators on GenLayer do not need to produce identical outputs to agree"))
+    assert finding(record, "ORIGINALITY")["state"] == "INCONCLUSIVE"
+    assert record["reason_code"] == "ORIGINALITY_INCONCLUSIVE"
+
+
+def test_eligibility_cannot_rest_on_a_reference_source(court, direct_vm):
+    answer = subjects()
+    answer["subjects"]["ELIGIBILITY"]["quotes"] = [
+        {"evidence_id": "E5", "text": "This starter kit gives you a minimal Intelligent Contract"}]
+    _sid, record = hk01(court, direct_vm, answer)
+    assert finding(record, "ELIGIBILITY")["state"] == "UNVERIFIABLE"
+    assert record["reason_code"] == "ELIGIBILITY_UNVERIFIABLE"

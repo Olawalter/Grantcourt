@@ -267,12 +267,11 @@ A validator panel compares the translation with the source and records a
 faithfulness verdict that the validators must agree on.
 """
 
-TEXTS["hackathon/carol/lexicon.py"] = """# Lexicon contract (excerpt)
+TEXTS["hackathon/carol/lexicon_config.py"] = """# Lexicon configuration (excerpt)
 
-class Lexicon(gl.Contract):
-    pass
-
-# TODO: the judging method is not written yet.
+SUPPORTED_LANGUAGES = ["es", "fr", "pt", "de"]
+MAX_SOURCE_CHARS = 4000
+FAITHFUL_LABELS = ("FAITHFUL", "UNFAITHFUL", "UNCLEAR")
 """
 
 TEXTS["hackathon/carol/lexicon-full.py"] = """# Lexicon contract (excerpt, complete)
@@ -843,10 +842,11 @@ HACKATHON = [
      "project_description": "Judges whether a community translation is faithful.",
      "claims": [],
      "evidence": [ev("hackathon/carol/lexicon-README.md", "REPOSITORY_README", "README"),
-                  ev("hackathon/carol/lexicon.py", "SOURCE_FILE", "contract source")],
+                  ev("hackathon/carol/lexicon_config.py", "SOURCE_FILE", "configuration file")],
      "expected": ["INSUFFICIENT_EVIDENCE", "REQUIRED_CRITERION_INSUFFICIENT", "NONE"],
-     "notes": "the committed source is a stub, so nothing shows the implementation; the "
-              "appeal adds the complete source and a test report and passes",
+     "notes": "the committed source file is configuration only: it neither shows nor "
+              "rules out the judging method; the appeal adds the complete source and a "
+              "test report and passes",
      "answer": answer(
          ELIGIBILITY=ELIGIBLE_HK(),
          RELEVANCE=s("RELEVANT", q("E1", "decides whether a community translation is faithful "
@@ -862,8 +862,8 @@ HACKATHON = [
                          "complete contract source"),
                       ev("hackathon/carol/lexicon-tests.txt", "TEST_REPORT", "test report")],
      "appeal_reason": "The first evaluation found the implementation unshown because the "
-                      "committed source was a stub. The complete source and its test report "
-                      "are attached.",
+                      "committed source file was configuration only. The complete source and "
+                      "its test report are attached.",
      "appeal_expected": ["PASS", "MEETS_POLICY", "TIER_C"],
      "appeal_answer": answer(
          ELIGIBILITY=ELIGIBLE_HK(),
@@ -950,8 +950,7 @@ CONTRIBUTION = [
      "expected": ["PASS", "MEETS_POLICY", "FULL"],
      "notes": "an original, accurate tutorial",
      "answer": answer(
-         ELIGIBILITY=s("ELIGIBLE", q("E1", "This tutorial shows how to decide which parts of "
-                                           "those answers must match")),
+         ELIGIBILITY=s("ELIGIBLE", q("E1", "Author wallet: " + W["alice"])),
          RELEVANCE=s("RELEVANT", q("E1", "which parts of those answers must match before the "
                                          "network accepts a result")),
          ORIGINALITY=s("ORIGINAL"),

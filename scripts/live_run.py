@@ -407,15 +407,18 @@ def file_and_evaluate(ac: dict, pid: str, case_id: str, raw: str, key: str = Non
     return sid
 
 
-def run_cases(ac: dict, raw: str, full: bool) -> dict:
+def run_cases(ac: dict, raw: str, full: bool, only: list = None) -> dict:
     pids = {}
-    for key, (name, cases) in INSTANCES.items():
+    instances = {k: (n, [c for c in cs if not only or c in only])
+                 for k, (n, cs) in INSTANCES.items()}
+    instances = {k: v for k, v in instances.items() if v[1]}
+    for key, (name, cases) in instances.items():
         # full: the reused-evidence filing, and the grant's second milestone
         extra = 1 if key in ("hackathon", "grant") and full else 0
         pids[key] = program(ac, key, name, raw, len(cases) + extra,
                             title=PROGRAMS[name]["title"] + " (" + key + ")",
                             per_applicant_limit=10)
-    for key, (_name, cases) in INSTANCES.items():
+    for key, (_name, cases) in instances.items():
         for case_id in cases:
             sid = file_and_evaluate(ac, pids[key], case_id, raw)
             case = CASES[case_id]
@@ -595,6 +598,7 @@ def main():
     parser.add_argument("--raw-base", required=True)
     parser.add_argument("--phase", choices=("cases", "full"), required=True)
     parser.add_argument("--out", default="")
+    parser.add_argument("--only", default="", help="cases phase: comma-separated case ids")
     args = parser.parse_args()
     raw = args.raw_base if args.raw_base.endswith("/") else args.raw_base + "/"
     if args.out:
@@ -613,7 +617,8 @@ def main():
     for name in ac:
         ac[name].funded(100 * 10 ** 15 if name != "owner" else 400 * 10 ** 15)
     full = args.phase == "full"
-    pids = run_cases(ac, raw, full)
+    only = [c for c in args.only.split(",") if c] if not full else None
+    pids = run_cases(ac, raw, full, only)
     if full:
         refusals(ac, pids, raw)
         stall(ac, raw)
