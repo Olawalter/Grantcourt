@@ -1,6 +1,6 @@
 # My guide to the equivalence principle
 
-Author wallet: 0x6ce54b4c551df40808742703fa435e52b88d621f
+Author wallet: 0x81de1a008d476280fb6890bd8c6949cf91e3d6d0
 
 Here is how agreement works on GenLayer.
 

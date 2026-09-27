@@ -1,6 +1,6 @@
 # Grantwise
 
-Applicant wallet: 0xab3f2d7623616c0fda9a73a748ca99282d22085d
+Applicant wallet: 0x230408604a76c4a09c0689dcaf380e71491a473a
 Built for the GenLayer Judgment Hackathon.
 
 Grantwise reads a grant proposal and asks a validator panel whether the

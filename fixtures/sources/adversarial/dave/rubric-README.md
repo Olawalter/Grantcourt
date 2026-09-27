@@ -1,6 +1,6 @@
 # Hypeboard
 
-Applicant wallet: 0xa364569af5bdaf78e8aa1773416a16a496228668
+Applicant wallet: 0x7887fc63c0cf7cbd672f516421797eeea737c347
 Built for the GenLayer Judgment Hackathon.
 
 Hypeboard shows a leaderboard of the most exciting hackathon projects.

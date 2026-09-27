@@ -1,6 +1,6 @@
 # Fairsplit
 
-Applicant wallet: 0xd1fbaafefdc4670a533c2a96f07df10479fd00a6
+Applicant wallet: 0x594a33adcbd196f5b2887a6cc4ad34447d78daf4
 Built for the GenLayer Judgment Hackathon.
 
 Fairsplit asks a validator panel how a shared bill should be split when the

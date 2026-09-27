@@ -1,6 +1,6 @@
 # Appeals on GenLayer, explained by a core engineer
 
-Author wallet: 0xa364569af5bdaf78e8aa1773416a16a496228668
+Author wallet: 0x7887fc63c0cf7cbd672f516421797eeea737c347
 
 I work on the GenLayer Labs staff as a core protocol engineer, and I want to
 explain appeals from the inside.

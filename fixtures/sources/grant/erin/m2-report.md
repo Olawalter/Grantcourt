@@ -1,6 +1,6 @@
 # Settlement adapter grant - milestone M2 report
 
-Grantee wallet: 0xd1fbaafefdc4670a533c2a96f07df10479fd00a6
+Grantee wallet: 0x594a33adcbd196f5b2887a6cc4ad34447d78daf4
 Grant: settlement adapter grant
 
 Milestone M2 asked for integration documentation. The integration guide is

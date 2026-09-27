@@ -1,6 +1,6 @@
 # Choosing an equivalence rule for your first Intelligent Contract
 
-Author wallet: 0x2181588581f943be374fbde775cd83c4c4b2bbcc
+Author wallet: 0x0b6e8473b03f218072f8dc2e0211ba0004e92ef1
 
 When several validators run your contract, each one gets its own answer from
 its own model. This tutorial shows how to decide which parts of those answers

@@ -1,6 +1,6 @@
 # Settlement adapter grant - milestone M1 report
 
-Grantee wallet: 0xd1fbaafefdc4670a533c2a96f07df10479fd00a6
+Grantee wallet: 0x594a33adcbd196f5b2887a6cc4ad34447d78daf4
 Grant: settlement adapter grant
 
 Milestone M1 asked for the adapter contract to be deployed to the test network

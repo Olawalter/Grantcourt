@@ -1,6 +1,6 @@
 # Clauseguard
 
-Applicant wallet: 0x2181588581f943be374fbde775cd83c4c4b2bbcc
+Applicant wallet: 0x0b6e8473b03f218072f8dc2e0211ba0004e92ef1
 Built for the GenLayer Judgment Hackathon.
 
 Clauseguard flags unfair clauses in freelance contracts. A freelancer pastes a

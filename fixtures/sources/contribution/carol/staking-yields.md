@@ -1,6 +1,6 @@
 # Maximising staking yields on proof-of-stake chains
 
-Author wallet: 0xab3f2d7623616c0fda9a73a748ca99282d22085d
+Author wallet: 0x230408604a76c4a09c0689dcaf380e71491a473a
 
 This article compares staking yields across three proof-of-stake networks and
 explains how compounding rewards changes the annual return. It covers lock-up
