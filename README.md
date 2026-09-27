@@ -189,7 +189,7 @@ submission_status, final, finalized_at, record_digest
 
 | Check | Result |
 |---|---|
-| the review of 27 September 2026 | answered: every commitment a view returns describes the list beside it, proved on the corrected deployment by eleven read-only checks (`deploy/letter_proof_0x768e30f3.json`) |
+| the review of 27 September 2026 | answered ([`docs/judge-round.md`](docs/judge-round.md)): every commitment a view returns describes the list beside it, proved on the corrected deployment by eleven read-only checks (`deploy/letter_proof_0x768e30f3.json`) |
 | `python -m pytest tests/direct -q` | 258 passed |
 | `genvm-lint check contracts/grantcourt.py --json` | lint ok, validation ok, 31 methods (20 view, 11 write); one I200 notice that a newer runner exists |
 | `ruff check .` | clean |

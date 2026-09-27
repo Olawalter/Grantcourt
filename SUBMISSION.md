@@ -129,55 +129,21 @@ narrowed, and a grant must allow a filing per milestone.
 
 ## Reply to the review of 27 September 2026
 
-**What was asked.** "After appeal evidence is appended, get_submission()
-currently returns the expanded items and digests but retains the pre-appeal
-evidence_commitment. Update the stored commitment when the item list changes, or
-expose clearly separated original and current commitments so every returned
-commitment matches the item list it describes." And: provide matching submitted
-and deployed source.
+The judges asked for matching updated source and deployment correcting the
+post-appeal evidence commitment: `get_submission()` returned the expanded items
+and digests while retaining the commitment computed at filing, so the answer did
+not check against itself.
 
-**The finding was right.** Evidence is hash-bound at filing, and an appeal may
-append at most two new items; the appeal round reads the appealed round's items
-plus those. The submission's stored commitment was computed at filing and never
-moved, so once an appeal had appended evidence, `get_submission` returned the
-expanded `items` and `evidence_digests` beside a commitment describing the
-shorter list. The answer did not check against itself. Nothing was mis-paid by
-it - every evaluation record already carried the commitment of the list its own
-round read, and consensus compares that per-round commitment, not the
-submission's - but a reader verifying the record would have been misled, which is
-the point of publishing a commitment at all.
+Both halves of the remedy are in: the stored commitment now moves with the list
+it describes, and the list as filed is kept separately under its own name, so no
+returned commitment describes another list. Nothing was mis-paid by the bug -
+consensus compares each round's own commitment, which was always over the list
+that round read - but a reader verifying the record would have been misled.
 
-**Both halves of the remedy, not one.** The stored commitment now moves with the
-list it describes, and the list as filed is kept separately under its own name,
-so there is no commitment anywhere that describes a list other than the one
-printed beside it:
-
-| Where | Field | Over which list |
-|---|---|---|
-| `get_submission` | `evidence_commitment` | the `items` and `evidence_digests` in that same answer |
-| `get_submission` | `filed_evidence_commitment` | the list as filed, never rewritten |
-| `get_submission` | `evidence_appended_by_appeal`, `item_count` | whether the two differ, and the length of the current list |
-| each evaluation record | `evidence_commitment` | the items that round read - unchanged by this fix |
-
-**How it is pinned.** Three tests: an appeal that appends evidence (the
-commitment moves, the filed one does not, and the moved one is the sha256 of the
-canonical item list the same answer returns), an appeal that adds nothing (both
-stay equal), and every stored round checked against its own list. Two mutations
-prove the suite would notice a regression - dropping the recomputation, and
-letting the filed commitment be overwritten - and both are killed.
-
-**On chain.** The corrected contract is the deployment of record for this reply,
-deployed from the commit this submission names, with the deployed source read
-back and compared byte for byte against the repository. The appeal case was run
-against it with real transactions, and a read-only script then checked every
-commitment against the list beside it; its output is committed under `deploy/`.
-The previous deployment and its live run are kept under `deploy/superseded/` so
-the earlier evidence stays readable.
-
-**Why the demo wallets differ from the earlier run.** The private keys of the
-judged run's demo wallets were not retained (they were never in the repository).
-The reply's run uses fresh keys, recorded with the proof; the evidence corpus,
-its digests and the pinned commit are unchanged.
+The corrected contract is the deployment of record, byte-identical to this
+repository, and the fix was proved on it with real transactions and eleven
+read-only checks. The full reply, the tests and mutations that pin it, and the
+proof's output: [`docs/judge-round.md`](docs/judge-round.md).
 
 ## Known limitations
 
