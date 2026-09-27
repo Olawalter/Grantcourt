@@ -61,7 +61,7 @@ themselves, and pays on the agreed result.
 | `genvm-lint check contracts/grantcourt.py --json` | lint ok, validation ok, 31 methods (20 view, 11 write); one I200 notice that a newer runner exists |
 | `ruff check .` | clean |
 | `python scripts/generate_fixtures.py --check` | fixtures match (53 files) |
-| `python scripts/mutation_check.py --jobs 3` | on the deployed contract: 74 of 74 mutations killed (`deploy/mutation_sweep_final.txt`); the earlier sweep's three survivors and the guards added since are recorded in `deploy/mutation_sweep.txt` and `deploy/mutation_recheck.txt` |
+| `python scripts/mutation_check.py --jobs 3` | on the deployed contract: **76 of 76 mutations killed** (`deploy/mutation_sweep_letter.txt`), including the two that pin the commitment fix; the earlier sweeps are kept in `deploy/mutation_sweep.txt`, `mutation_recheck.txt` and `mutation_sweep_final.txt` |
 | `python scripts/deploy_studionet.py --verify` | byte-identical, 31 schema methods |
 | `python -m pytest tests/integration -q` | 7 passed, 1 skipped (the opt-in live write) |
 | CI (`.github/workflows/ci.yml`) | green on every pushed commit |

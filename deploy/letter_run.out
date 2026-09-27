@@ -1,0 +1,23 @@
+wallets: owner 0xfbbad778277f6c59a1c626a2bdc076e2a563bc21, alice 0x0b6e8473b03f218072f8dc2e0211ba0004e92ef1, bob 0x81de1a008d476280fb6890bd8c6949cf91e3d6d0, carol 0x230408604a76c4a09c0689dcaf380e71491a473a, dave 0x7887fc63c0cf7cbd672f516421797eeea737c347, erin 0x594a33adcbd196f5b2887a6cc4ad34447d78daf4, stranger 0x84c9c25303f8c58cf7428ac19215db1afda0781d
+  verified 48 source locations against local bytes
+    rpc transient on eth_getBalance (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+  funding owner from the faucet (balance 0)
+  funding alice from the faucet (balance 0)
+  funding bob from the faucet (balance 0)
+  funding carol from the faucet (balance 0)
+  funding dave from the faucet (balance 0)
+  funding erin from the faucet (balance 0)
+  funding stranger from the faucet (balance 0)
+  owner.create_program tx 0x11117c8d835c5efef8dd9f07e7fa715276de69bd8d1b9dbda0ec7437c5f2bbba
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.fund_program tx 0xda9fca1adaee4e13cdc26807722290a1c1d4994013849a09cac062f4565267a8
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  owner.activate_program tx 0xbdd41757d41a4fc06da12a69664bbb82db907fc1db29726c0e88245e579c0ad9
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'IDLE', 'AGREE']
+    rpc transient on eth_sendRawTransaction (1/8): Request to https://studio.genlayer.com/api failed: HTTPSConnectionPool(host='studio.genlay; retry in 5s
+  carol.submit tx 0x26ed2d45b254bde17aaace771f90ca206711055e75e470192acc3a3032bd7d33
+    FINALIZED leader SUCCESS votes ['IDLE', 'AGREE', 'AGREE', 'AGREE', 'AGREE']
+  owner.request_evaluation tx 0xe00e297b04e3a206090b98d74a1037eb181bbe4b94c029ff3e741c0fbf87da90
+    FINALIZED leader SUCCESS votes ['AGREE', 'AGREE', 'IDLE', 'AGREE', 'IDLE']
+  HK06: FAIL / REQUIRED_CRITERION_NOT_MET / NONE (PANEL) held=False
+DONE {"held": [], "not_held": ["HK06"]}

@@ -72,10 +72,55 @@ optionally `appeal(submission_id, reason, items_json)`, and after the window
 
 ## Deployment of record
 
+Corrected after the review of 27 September 2026: the submission's evidence
+commitment now moves with the list it describes, and the list as filed is kept
+separately. The deployment the review read, and its live run, are under
+`deploy/superseded/0x89310fcb/`.
+
 | Item | Value |
 |---|---|
 | Network | GenLayer StudioNet, chain id 61999 |
 | RPC | `https://studio.genlayer.com/api` |
+| Contract | `0x768E30F335E6Ff12a5244b9274d56d30F37d0674` |
+| Explorer | https://explorer-studio.genlayer.com/address/0x768E30F335E6Ff12a5244b9274d56d30F37d0674 |
+| Deployment transaction | `0xb78386aa2d9a5ac679a2e19f133ed22b72965738cf3fdcda7c04a94e9c0b367d` |
+| Deployed at | 2026-09-27T18:03:55Z |
+| Receipt | status FINALIZED, leader execution SUCCESS, votes AGREE, AGREE, AGREE, AGREE, AGREE |
+| Source commit | `adadc47803e6880ff07914c6aa905029131deb23` |
+| Source blob | `1d4ab1cf513232aa126eaccd6e62c778f8a84609` |
+| Source sha256 | `bd51d773e64247683ac7c320975271ab3236a83ff9630989374cb5f7802674f7` |
+| Deployed source sha256 (`gen_getContractCode`) | `bd51d773e64247683ac7c320975271ab3236a83ff9630989374cb5f7802674f7` - byte-identical |
+| Deployer (public address) | `0x4140164dcC7b22D7A1B61Ad12D62BB2894d8063B` |
+| Runner | `py-genlayer:1jb45aa8ynh2a9c9xn3b7qqh8sm5q93hwfp7jqmwsfhh8jpz09h6` |
+
+### The reply's live proof
+
+One submission was filed, evaluated and appealed against this deployment, and a
+read-only script then checked every commitment against the list beside it.
+
+| Step | Record |
+|---|---|
+| program, funding, activation, submission, evaluation (case HK06) | `deploy/letter_run_0x768e30f3.json` |
+| the appeal that appended two hash-bound items | `deploy/letter_appeal_0x768e30f3.json` |
+| eleven checks, all passed | `deploy/letter_proof_0x768e30f3.json` |
+
+```bash
+python scripts/letter_proof.py 0x768E30F335E6Ff12a5244b9274d56d30F37d0674 --submission GS-000002
+```
+
+The item list went from three to five; `get_submission`'s `evidence_commitment`
+is the sha256 of the canonical list it returns, `filed_evidence_commitment` is
+the commitment the first round carried, the two differ,
+`evidence_appended_by_appeal` says so, and each of the two evaluation records
+carries the commitment of the list its own round read. That submission's
+evaluation outcome is a panel reading, and HK06 is one of the two cases whose
+reading the judged run already reported as variable; it is not what this proof
+asserts.
+
+### The superseded deployment of record
+
+| Item | Value |
+|---|---|
 | Contract | `0x89310fcbA7155d99826934E4e75c273F8f11D709` |
 | Explorer | https://explorer-studio.genlayer.com/address/0x89310fcbA7155d99826934E4e75c273F8f11D709 |
 | Deployment transaction | `0x8741cd475b0d4832c16ce1643e20558f9bbd9dbdc0d8d46969cc135a837d2e23` |

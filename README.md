@@ -21,7 +21,7 @@ Deployment of record: [`0x89310fcbA7155d99826934E4e75c273F8f11D709`](https://exp
 | What evidence it uses | The builder's items and the program's reference sources, each committed as url + sha256; every byte is verified before anything reads it. |
 | How consensus works | `gl.vm.run_nondet_unsafe` once per evaluation. Each validator reproduces the round from its own fetches and its own model call, gates the leader's payload against its own bytes, and agrees only if what was read matches and its own findings lead to the same status, reason, band, reward, sufficiency, reachability, originality band, critical failure, bond, required-criterion states and contradicted claims. |
 | How money moves | Two payable entries (`fund_program`, `submit`), the reward reserved at filing, payment only at `finalize_submission`, one exit (`withdraw`). A refused deposit is returned as a credit, never lost. |
-| What tests prove it | 255 Direct Mode tests across every status and reason code, band boundaries, hostile evidence, forged leader payloads through the captured validator, appeals and money conservation; a 74-of-74 mutation sweep; GenVM lint; two live diagnostic passes and a 115-transaction live run on StudioNet. See "Verified". |
+| What tests prove it | 258 Direct Mode tests across every status and reason code, band boundaries, hostile evidence, forged leader payloads through the captured validator, appeals and money conservation; a 76-of-76 mutation sweep; GenVM lint; two live diagnostic passes and a 115-transaction live run on StudioNet. See "Verified". |
 
 ## Deterministic and intelligent responsibilities
 
@@ -189,11 +189,12 @@ submission_status, final, finalized_at, record_digest
 
 | Check | Result |
 |---|---|
-| `python -m pytest tests/direct -q` | 255 passed |
+| the review of 27 September 2026 | answered: every commitment a view returns describes the list beside it, proved on the corrected deployment by eleven read-only checks (`deploy/letter_proof_0x768e30f3.json`) |
+| `python -m pytest tests/direct -q` | 258 passed |
 | `genvm-lint check contracts/grantcourt.py --json` | lint ok, validation ok, 31 methods (20 view, 11 write); one I200 notice that a newer runner exists |
 | `ruff check .` | clean |
 | `python scripts/generate_fixtures.py --check` | fixtures match (53 files) |
-| `python scripts/mutation_check.py --jobs 3` | on the deployed contract: 74 of 74 mutations killed (`deploy/mutation_sweep_final.txt`); the earlier sweep's three survivors and the guards added since are recorded in `deploy/mutation_sweep.txt` and `deploy/mutation_recheck.txt` |
+| `python scripts/mutation_check.py --jobs 3` | on the deployed contract: **76 of 76 mutations killed** (`deploy/mutation_sweep_letter.txt`), including the two that pin the commitment fix; the earlier sweeps are kept in `deploy/mutation_sweep.txt`, `mutation_recheck.txt` and `mutation_sweep_final.txt` |
 | `python scripts/deploy_studionet.py --verify` | byte-identical, 31 schema methods |
 | `python -m pytest tests/integration -q` | 7 passed, 1 skipped (the opt-in live write) |
 | CI (`.github/workflows/ci.yml`) | green on every pushed commit |

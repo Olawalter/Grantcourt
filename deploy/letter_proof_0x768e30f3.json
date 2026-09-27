@@ -1,0 +1,107 @@
+{
+ "checks": [
+  {
+   "check": "get_submission's commitment is over the items it returns",
+   "detail": "bc4dffedcdb763f9bfebad045ae9a5f884ba8aec290976da13bfdc29c3d3ae9b vs bc4dffedcdb763f9bfebad045ae9a5f884ba8aec290976da13bfdc29c3d3ae9b",
+   "ok": true
+  },
+  {
+   "check": "the digests it returns are those items' digests, in order",
+   "detail": "",
+   "ok": true
+  },
+  {
+   "check": "item_count is the length of that list",
+   "detail": "5",
+   "ok": true
+  },
+  {
+   "check": "more than one round was judged",
+   "detail": "EV-000002, EV-000003",
+   "ok": true
+  },
+  {
+   "check": "the filed commitment is the first round's commitment",
+   "detail": "5dc575276430cfeaacfff66e6864ab4ead2fde4e7fdd420e517be590006673e4 vs 5dc575276430cfeaacfff66e6864ab4ead2fde4e7fdd420e517be590006673e4",
+   "ok": true
+  },
+  {
+   "check": "the appeal appended evidence",
+   "detail": "3 -> 5",
+   "ok": true
+  },
+  {
+   "check": "evidence_appended_by_appeal says so",
+   "detail": "",
+   "ok": true
+  },
+  {
+   "check": "the current commitment is the appeal round's commitment",
+   "detail": "",
+   "ok": true
+  },
+  {
+   "check": "the two commitments differ, as the two lists do",
+   "detail": "",
+   "ok": true
+  },
+  {
+   "check": "round EV-000002 carries the commitment of the list it read",
+   "detail": "",
+   "ok": true
+  },
+  {
+   "check": "round EV-000003 carries the commitment of the list it read",
+   "detail": "",
+   "ok": true
+  }
+ ],
+ "contract": "0x768E30F335E6Ff12a5244b9274d56d30F37d0674",
+ "evaluation_ids": [
+  "EV-000002",
+  "EV-000003"
+ ],
+ "evidence_appended_by_appeal": true,
+ "evidence_commitment": "bc4dffedcdb763f9bfebad045ae9a5f884ba8aec290976da13bfdc29c3d3ae9b",
+ "filed_evidence_commitment": "5dc575276430cfeaacfff66e6864ab4ead2fde4e7fdd420e517be590006673e4",
+ "item_count": 5,
+ "items": [
+  {
+   "evidence_id": "E1",
+   "sha256": "be39989c182c4e085881fd69a5154ddd06715ae221adf262bae92ead0dfabf1e"
+  },
+  {
+   "evidence_id": "E2",
+   "sha256": "322c282ea81a8f4a705919f9c6e699fd125fd73fd266940761b62ee7f2037c16"
+  },
+  {
+   "evidence_id": "E3",
+   "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1"
+  },
+  {
+   "evidence_id": "E4",
+   "sha256": "23a0614664c7f57ca93086a3038952b044ca76745d7d6bea5d66194c6dd9e5e7"
+  },
+  {
+   "evidence_id": "E5",
+   "sha256": "ef611ea70634253344bbfe976ad8cde41a1b97be8a604a46356729c5064627b5"
+  }
+ ],
+ "passed": true,
+ "read_at": "2026-09-27T18:33:52Z",
+ "rounds": [
+  {
+   "evaluation_id": "EV-000002",
+   "evidence_commitment": "5dc575276430cfeaacfff66e6864ab4ead2fde4e7fdd420e517be590006673e4",
+   "items": 3,
+   "mode": "EVALUATION"
+  },
+  {
+   "evaluation_id": "EV-000003",
+   "evidence_commitment": "bc4dffedcdb763f9bfebad045ae9a5f884ba8aec290976da13bfdc29c3d3ae9b",
+   "items": 5,
+   "mode": "APPEAL"
+  }
+ ],
+ "submission_id": "GS-000002"
+}

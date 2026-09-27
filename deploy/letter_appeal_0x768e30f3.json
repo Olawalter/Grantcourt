@@ -1,0 +1,22 @@
+{
+ "added_items": [
+  {
+   "category": "SOURCE_FILE",
+   "label": "complete contract source",
+   "sha256": "23a0614664c7f57ca93086a3038952b044ca76745d7d6bea5d66194c6dd9e5e7",
+   "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/762b88d25d178a1f0d874651a140eabc25ded0b0/fixtures/sources/hackathon/carol/lexicon-full.py"
+  },
+  {
+   "category": "TEST_REPORT",
+   "label": "test report",
+   "sha256": "ef611ea70634253344bbfe976ad8cde41a1b97be8a604a46356729c5064627b5",
+   "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/762b88d25d178a1f0d874651a140eabc25ded0b0/fixtures/sources/hackathon/carol/lexicon-tests.txt"
+  }
+ ],
+ "appeal_tx": "0xd79c8e47483d0df4cadd1309262508d420ad1f7a12e7c453c12e78bd13c46aa9",
+ "at": "2026-09-27T18:33:17Z",
+ "case": "HK06",
+ "contract": "0x768E30F335E6Ff12a5244b9274d56d30F37d0674",
+ "leader_execution": "SUCCESS",
+ "submission_id": "GS-000002"
+}

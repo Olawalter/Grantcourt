@@ -1,0 +1,339 @@
+{
+  "address": "0x768E30F335E6Ff12a5244b9274d56d30F37d0674",
+  "constitutions": {
+    "hackathon": {
+      "accepted_submission_types": [
+        "PROJECT"
+      ],
+      "allowed_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE",
+        "DEPLOYMENT_RECORD",
+        "DOCUMENTATION",
+        "TEST_REPORT",
+        "SCREENSHOT_TRANSCRIPT"
+      ],
+      "appeal_window_seconds": 900,
+      "criteria": [
+        {
+          "criterion_id": "genlayer_fit",
+          "description": "The implementation uses GenLayer for a judgment problem that cannot be reduced to deterministic computation.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "REPOSITORY_README"
+          ],
+          "name": "Meaningful GenLayer usage",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "implementation",
+          "description": "The evidence reasonably demonstrates that the claimed implementation exists and performs the described function.",
+          "evidence_categories": [
+            "SOURCE_FILE",
+            "TEST_REPORT",
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Functional implementation",
+          "required": true,
+          "weight": 30
+        },
+        {
+          "criterion_id": "documentation",
+          "description": "A new builder can understand what the project does and how to run it.",
+          "evidence_categories": [
+            "REPOSITORY_README",
+            "DOCUMENTATION"
+          ],
+          "name": "Documentation quality",
+          "required": false,
+          "weight": 20
+        },
+        {
+          "criterion_id": "deployment",
+          "description": "The project is deployed to a GenLayer network and has been used at least once.",
+          "evidence_categories": [
+            "DEPLOYMENT_RECORD"
+          ],
+          "name": "Evidence of deployment",
+          "required": false,
+          "weight": 20
+        }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "description": "A hackathon for projects that use GenLayer where a judgment is needed: an answer that ordinary contract code cannot compute.",
+      "eligibility_policy": "Open to any builder. The project must be built for this hackathon, and its README must say it was built for the GenLayer Judgment Hackathon.",
+      "evaluation_policy_version": 1,
+      "grantee": "",
+      "milestones": [],
+      "opens_at": "2026-09-01T00:00:00Z",
+      "originality_policy": "SIMILAR_BLOCKS_REWARD",
+      "pass_threshold": 60,
+      "per_applicant_limit": 10,
+      "program_type": "HACKATHON",
+      "reference_sources": [
+        {
+          "label": "hackathon starter kit README",
+          "sha256": "0cefc6af68d1cdd21da1b17b93fd4425ef203d0b0afbc430951b1166f7dc86c1",
+          "url": "https://raw.githubusercontent.com/Olawalter/Grantcourt/762b88d25d178a1f0d874651a140eabc25ded0b0/fixtures/sources/references/starter-kit-readme.md"
+        }
+      ],
+      "require_applicant_mark": true,
+      "required_evidence_categories": [
+        "REPOSITORY_README",
+        "SOURCE_FILE"
+      ],
+      "reward_bands": [
+        {
+          "label": "TIER_A",
+          "min_score": 90,
+          "reward_atto": "6000000000000000"
+        },
+        {
+          "label": "TIER_B",
+          "min_score": 75,
+          "reward_atto": "4000000000000000"
+        },
+        {
+          "label": "TIER_C",
+          "min_score": 60,
+          "reward_atto": "2000000000000000"
+        }
+      ],
+      "stall_window_seconds": 14400,
+      "submission_bond_atto": "500000000000000",
+      "supersedes": "",
+      "title": "GenLayer Judgment Hackathon (hackathon)"
+    }
+  },
+  "finished_at": "2026-09-27T18:30:12Z",
+  "live_scale": 10,
+  "network": "studionet",
+  "outcomes": {
+    "HK06": {
+      "applicant_mark": true,
+      "criterion_result_hash": "8c59dd2d857a8109a78559518c0f45e0f693d3dfa2408e8f295c7084b2068fb7",
+      "criterion_results": [
+        [
+          "ELIGIBILITY",
+          "ELIGIBLE",
+          "PANEL"
+        ],
+        [
+          "RELEVANCE",
+          "RELEVANT",
+          "PANEL"
+        ],
+        [
+          "ORIGINALITY",
+          "ORIGINAL",
+          "PANEL"
+        ],
+        [
+          "genlayer_fit",
+          "MET",
+          "PANEL"
+        ],
+        [
+          "implementation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "documentation",
+          "PARTIALLY_MET",
+          "PANEL"
+        ],
+        [
+          "deployment",
+          "EVIDENCE_INSUFFICIENT",
+          "PANEL"
+        ]
+      ],
+      "critical_failure": false,
+      "decided_by": "PANEL",
+      "duplicate_items": [],
+      "evaluation_id": "EV-000002",
+      "evidence_scope": {
+        "added": [
+          "E1",
+          "E2",
+          "E3"
+        ],
+        "prior": []
+      },
+      "evidence_sufficiency": "SUFFICIENT",
+      "expected": [
+        "INSUFFICIENT_EVIDENCE",
+        "REQUIRED_CRITERION_INSUFFICIENT",
+        "NONE"
+      ],
+      "held": false,
+      "hidden": [],
+      "markers": [],
+      "nodes": [
+        {
+          "mode": "leader",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": "policy:prd-gpt-5-4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        },
+        {
+          "mode": "validator",
+          "model": "openai/gpt-5.4",
+          "stdout": "",
+          "vote": "agree"
+        },
+        {
+          "mode": "validator",
+          "model": null,
+          "stdout": "",
+          "vote": "idle"
+        }
+      ],
+      "observed": [
+        "FAIL",
+        "REQUIRED_CRITERION_NOT_MET",
+        "NONE"
+      ],
+      "originality_band": "ORIGINAL",
+      "overall_score": 55,
+      "record_digest": "a8d451ffe32bdfb8fe170cc559383cd232f42f5243eb0f3d434e79d017f34ab7",
+      "reward_atto": "0",
+      "rows": [
+        [
+          "E1",
+          "EXAMINED"
+        ],
+        [
+          "E2",
+          "EXAMINED"
+        ],
+        [
+          "E3",
+          "EXAMINED"
+        ]
+      ],
+      "source_reachability": "VERIFIED",
+      "submission_id": "GS-000002",
+      "tx": "0xe00e297b04e3a206090b98d74a1037eb181bbe4b94c029ff3e741c0fbf87da90"
+    }
+  },
+  "pending": {},
+  "phase": "cases",
+  "programs": {
+    "hackathon": "GP-000002"
+  },
+  "raw_base": "https://raw.githubusercontent.com/Olawalter/Grantcourt/762b88d25d178a1f0d874651a140eabc25ded0b0/fixtures/",
+  "started_at": "2026-09-27T18:24:27Z",
+  "steps": {
+    "activate:hackathon": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "activate_program",
+      "returned": "{'readable': '\"OPEN\"'}",
+      "status": "FINALIZED",
+      "step": "activate:hackathon",
+      "tx": "0xbdd41757d41a4fc06da12a69664bbb82db907fc1db29726c0e88245e579c0ad9",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE"
+      ]
+    },
+    "create:hackathon": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "create_program",
+      "returned": "{'readable': '\"GP-000002\"'}",
+      "status": "FINALIZED",
+      "step": "create:hackathon",
+      "tx": "0x11117c8d835c5efef8dd9f07e7fa715276de69bd8d1b9dbda0ec7437c5f2bbba",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    },
+    "evaluate:HK06": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "request_evaluation",
+      "returned": "{'readable': '\"EV-000002\"'}",
+      "status": "FINALIZED",
+      "step": "evaluate:HK06",
+      "tx": "0xe00e297b04e3a206090b98d74a1037eb181bbe4b94c029ff3e741c0fbf87da90",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "fund:hackathon:6000000000000000": {
+      "accepted": true,
+      "actor": "owner",
+      "leader_execution": "SUCCESS",
+      "method": "fund_program",
+      "returned": "{'readable': '\"6000000000000000\"'}",
+      "status": "FINALIZED",
+      "step": "fund:hackathon:6000000000000000",
+      "tx": "0xda9fca1adaee4e13cdc26807722290a1c1d4994013849a09cac062f4565267a8",
+      "value_atto": "6000000000000000",
+      "votes": [
+        "AGREE",
+        "AGREE",
+        "IDLE",
+        "AGREE",
+        "IDLE"
+      ]
+    },
+    "submit:HK06": {
+      "accepted": true,
+      "actor": "carol",
+      "leader_execution": "SUCCESS",
+      "method": "submit",
+      "returned": "{'readable': '\"GS-000002\"'}",
+      "status": "FINALIZED",
+      "step": "submit:HK06",
+      "tx": "0x26ed2d45b254bde17aaace771f90ca206711055e75e470192acc3a3032bd7d33",
+      "value_atto": "500000000000000",
+      "votes": [
+        "IDLE",
+        "AGREE",
+        "AGREE",
+        "AGREE",
+        "AGREE"
+      ]
+    }
+  },
+  "submissions": {
+    "HK06": "GS-000002"
+  },
+  "summary": {
+    "held": [],
+    "not_held": [
+      "HK06"
+    ]
+  }
+}
