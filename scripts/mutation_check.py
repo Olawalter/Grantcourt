@@ -47,6 +47,14 @@ def m(name: str, anchor: str, replacement: str = None) -> tuple:
 
 
 MUTATIONS = [
+    # -- every commitment describes the list beside it (judge letter, 27 Sep) ------------
+    m("an appeal leaves the submission's commitment describing the list as filed",
+      "        sub.evidence_commitment = _sha256_hex(sub.items)\n", ""),
+    m("the filed commitment is overwritten instead of kept",
+      "            filed_commitment=_sha256_hex(_canonical(items)),\n"
+      "            definition_hash=str(program.definition_hash),\n",
+      "            filed_commitment=\"\",\n"
+      "            definition_hash=str(program.definition_hash),\n"),
     # -- evidence --------------------------------------------------------------------
     m("changed bytes are read as the committed evidence",
       '    if hashlib.sha256(body).hexdigest() != item["sha256"]:'),

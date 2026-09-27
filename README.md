@@ -155,6 +155,16 @@ One appeal per application, by the applicant, inside the window. It is a fresh r
 | `list_programs`, `list_program_submissions` | pages of ids |
 | `get_claimable`, `get_returned_deposits`, `get_stats`, `get_config` | ledger, refused deposits, totals, enums and limits |
 
+## Evidence, and the commitment over it
+
+A submission's evidence is hash-bound at filing. An appeal may append at most two
+new items, and the appeal round reads the appealed round's items plus those - so
+the list can grow exactly once. Every commitment the contract returns says which
+list it is over: `get_submission` gives `evidence_commitment` over the items in
+that same answer and `filed_evidence_commitment` over the list as filed, and each
+evaluation record carries the commitment of the list its own round read. See
+[`docs/INTEGRATION.md`](docs/INTEGRATION.md#which-commitment-describes-which-list).
+
 ## Decision receipt
 
 ```text

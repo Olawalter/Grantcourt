@@ -885,3 +885,66 @@ def test_eligibility_cannot_rest_on_a_reference_source(court, direct_vm):
     _sid, record = hk01(court, direct_vm, answer)
     assert finding(record, "ELIGIBILITY")["state"] == "UNVERIFIABLE"
     assert record["reason_code"] == "ELIGIBILITY_UNVERIFIABLE"
+
+
+# -- every commitment describes the list beside it (judge letter, 27 Sep 2026) --
+
+def test_an_appeal_that_appends_evidence_moves_the_commitment_with_the_list(court,
+                                                                           direct_vm, mod):
+    """The letter's finding: get_submission returned the expanded items and
+    digests with the commitment of the list as FILED. A reader checking the
+    answer against itself would have found a commitment describing a list that
+    was no longer there."""
+    program_id = open_program(court, direct_vm)
+    sid = submit(court, direct_vm, program_id, "HK06")
+    evaluate(court, direct_vm, sid, answer_for("HK06"))
+    filed = court.get_submission(sid)
+    assert filed["evidence_commitment"] == filed["filed_evidence_commitment"]
+    assert filed["evidence_commitment"] == mod._sha256_hex(mod._canonical(filed["items"]))
+    assert filed["evidence_appended_by_appeal"] is False
+    assert filed["item_count"] == len(filed["items"])
+
+    appeal_case(court, direct_vm, sid, "HK06")
+    after = court.get_submission(sid)
+    assert len(after["items"]) > len(filed["items"])
+    assert after["evidence_commitment"] == mod._sha256_hex(mod._canonical(after["items"]))
+    assert after["evidence_digests"] == [it["sha256"] for it in after["items"]]
+    assert after["filed_evidence_commitment"] == filed["evidence_commitment"]
+    assert after["evidence_commitment"] != after["filed_evidence_commitment"]
+    assert after["evidence_appended_by_appeal"] is True
+    assert after["item_count"] == len(after["items"])
+
+
+def test_an_appeal_that_adds_nothing_leaves_both_commitments_equal(court, direct_vm, mod):
+    program_id = open_program(court, direct_vm)
+    sid = submit(court, direct_vm, program_id, "HK01")
+    evaluate(court, direct_vm, sid, answer_for("HK01"))
+    before = court.get_submission(sid)
+    stage(direct_vm, answer_for("HK01"))
+    as_sender(direct_vm, "alice")
+    court.appeal(sid, "Confirming the result with the same evidence.", "[]")
+    after = court.get_submission(sid)
+    assert after["items"] == before["items"]
+    assert after["evidence_commitment"] == before["evidence_commitment"]
+    assert after["filed_evidence_commitment"] == before["evidence_commitment"]
+    assert after["evidence_appended_by_appeal"] is False
+
+
+def test_each_evaluation_record_keeps_the_commitment_of_the_list_it_read(court, direct_vm,
+                                                                        mod):
+    """The submission holds the current and the filed commitment; each round
+    holds its own, over the items that round actually read."""
+    program_id = open_program(court, direct_vm)
+    sid = submit(court, direct_vm, program_id, "HK06")
+    first = evaluate(court, direct_vm, sid, answer_for("HK06"))
+    appeal = appeal_case(court, direct_vm, sid, "HK06")
+    assert first["evidence_commitment"] == mod._sha256_hex(mod._canonical(first["items"]))
+    assert appeal["evidence_commitment"] == mod._sha256_hex(mod._canonical(appeal["items"]))
+    assert first["evidence_commitment"] != appeal["evidence_commitment"]
+    current = court.get_submission(sid)
+    assert current["evidence_commitment"] == appeal["evidence_commitment"]
+    assert current["filed_evidence_commitment"] == first["evidence_commitment"]
+    for evaluation_id in court.get_submission(sid)["evaluation_ids"]:
+        full = court.get_evaluation_record(evaluation_id)
+        assert full["evidence_commitment"] == mod._sha256_hex(
+            mod._canonical(full["items"])), evaluation_id

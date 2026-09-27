@@ -1742,7 +1742,7 @@ class Submission:
     project_description: str
     claims: str                   # canonical JSON: [{claim_id, claim, criterion_id}]
     items: str                    # canonical JSON: the hash-bound evidence, E1 first
-    evidence_commitment: str
+    evidence_commitment: str      # over `items` as they now stand; an appeal updates it
     definition_hash: str          # the constitution the applicant committed to
     policy_version: u32
     submitted_at: str
@@ -1756,6 +1756,7 @@ class Submission:
     finalized_at: str
     reward_atto: u256
     bond_outcome: str
+    filed_commitment: str         # over the items as filed, never rewritten
 
 
 class GrantCourt(gl.Contract):
@@ -2220,6 +2221,7 @@ class GrantCourt(gl.Contract):
             project_name=project_name, project_description=project_description,
             claims=_canonical(claims), items=_canonical(items),
             evidence_commitment=_sha256_hex(_canonical(items)),
+            filed_commitment=_sha256_hex(_canonical(items)),
             definition_hash=str(program.definition_hash),
             policy_version=u32(spec["evaluation_policy_version"]), submitted_at=now,
             deadline_snapshot=spec["deadline"], status=SUB_SUBMITTED, bond_atto=u256(value),
@@ -2333,6 +2335,10 @@ class GrantCourt(gl.Contract):
         self._commit_items(str(sub.program_id), str(sub.applicant), str(sub.submission_id),
                            added)
         sub.items = _canonical(items)
+        # the commitment travels with the list it describes: the appealed round's
+        # own commitment stays in its record, and `filed_commitment` keeps the
+        # list as filed, so no returned commitment can describe another list
+        sub.evidence_commitment = _sha256_hex(sub.items)
         sub.appeal = _canonical({"appellant": str(sub.applicant), "reason": reason,
                                  "added_items": new_ids, "filed_at": now,
                                  "original_evaluation_id": original["evaluation_id"],
@@ -2502,7 +2508,15 @@ class GrantCourt(gl.Contract):
             "project_description": str(sub.project_description),
             "claims": json.loads(str(sub.claims)), "items": self._items(sub),
             "evidence_digests": [it["sha256"] for it in self._items(sub)],
+            # `evidence_commitment` is over the `items` in this answer;
+            # `filed_evidence_commitment` is over the list as filed. They differ
+            # exactly when an appeal appended evidence, and each evaluation
+            # record carries the commitment of the list its own round read.
             "evidence_commitment": str(sub.evidence_commitment),
+            "filed_evidence_commitment": str(sub.filed_commitment),
+            "item_count": len(self._items(sub)),
+            "evidence_appended_by_appeal":
+                str(sub.evidence_commitment) != str(sub.filed_commitment),
             "definition_hash": str(sub.definition_hash),
             "policy_version": int(sub.policy_version), "submitted_at": str(sub.submitted_at),
             "deadline_snapshot": str(sub.deadline_snapshot), "status": str(sub.status),

@@ -110,6 +110,25 @@ Views have no clock: time-dependent questions take an `as_of` argument
 (`get_program_status`, `get_actions`), and every write checks its own
 transaction time.
 
+## Which commitment describes which list
+
+Evidence can be appended once: an appeal may add up to two hash-bound items, and
+the appeal round reads the appealed round's items plus those. Three commitments
+therefore exist, and each names the list it is over:
+
+| Where | Field | Over which list |
+|---|---|---|
+| `get_submission` | `evidence_commitment` | the `items` and `evidence_digests` in that same answer - it moves when an appeal appends evidence |
+| `get_submission` | `filed_evidence_commitment` | the list as filed, never rewritten |
+| `get_submission` | `evidence_appended_by_appeal`, `item_count` | whether the two differ, and how many items the current list holds |
+| `get_evaluation_record` | `evidence_commitment` | the items **that round** read, stored with the round |
+
+A consumer can check any of them by taking the sha256 of the canonical JSON of
+the item list printed beside it. Before this was separated, `get_submission`
+returned the expanded items with the commitment of the list as filed, so the
+answer did not check against itself; a judge's review found it, and the fix is
+the deployment of record dated 27 September.
+
 ## Receipt fields
 
 | Field | Meaning |
@@ -117,7 +136,7 @@ transaction time.
 | `receipt_version` | 1 |
 | `program_id`, `submission_id`, `applicant`, `evaluation_id` | what was judged, whose, and which record stands |
 | `policy_version`, `definition_hash` | the constitution it was judged under |
-| `evidence_digests`, `evidence_commitment` | the sha256 of every item read, in order, and of the item list |
+| `evidence_digests`, `evidence_commitment` | the sha256 of every item read, in order, and of the item list **that round read** |
 | `criterion_result_hash` | sha256 of every subject's id and state |
 | `final_status`, `reason_codes` | the outcome |
 | `score`, `score_band`, `reward_band`, `reward_atto` | the arithmetic and what it pays |
